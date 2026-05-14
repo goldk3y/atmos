@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Play, X } from "lucide-react";
@@ -48,47 +49,48 @@ function VideoPlayerModal({
     };
   }, [isOpen, onOpenChange]);
 
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-          aria-modal="true"
-          role="dialog"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-          onClick={() => onOpenChange(false)}
-        >
-          <button
-            onClick={() => onOpenChange(false)}
-            className="absolute right-4 top-4 z-50 rounded-full bg-white/10 p-2 text-white transition-[background-color] duration-150 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            aria-label="Close video player"
-          >
-            <X className="h-6 w-6" />
-          </button>
+  if (!isOpen || typeof document === "undefined") {
+    return null;
+  }
 
-          <motion.div
-            className="aspect-video w-full max-w-4xl p-4"
-            initial={{ transform: "scale(0.95)", opacity: 0 }}
-            animate={{ transform: "scale(1)", opacity: 1 }}
-            exit={{ transform: "scale(0.97)", opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              src={videoUrl}
-              title={title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full rounded-lg"
-            />
-          </motion.div>
+  return createPortal(
+    <AnimatePresence>
+      <motion.div
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm"
+        aria-modal="true"
+        role="dialog"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+      >
+        <button
+          onClick={() => onOpenChange(false)}
+          className="absolute right-4 top-4 z-[101] rounded-full bg-white/10 p-2 text-white transition-[background-color] duration-150 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          aria-label="Close video player"
+        >
+          <X className="h-6 w-6" />
+        </button>
+
+        <motion.div
+          className="aspect-video w-full max-w-4xl p-4"
+          initial={{ transform: "scale(0.95)", opacity: 0 }}
+          animate={{ transform: "scale(1)", opacity: 1 }}
+          exit={{ transform: "scale(0.97)", opacity: 0 }}
+          transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+        >
+          <iframe
+            src={videoUrl}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="h-full w-full rounded-lg"
+          />
         </motion.div>
-      )}
-    </AnimatePresence>
+      </motion.div>
+    </AnimatePresence>,
+    document.body
   );
 }
 
