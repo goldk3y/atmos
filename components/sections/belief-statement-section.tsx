@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useInView, useReducedMotion } from "motion/react";
+import { m, useInView, useReducedMotion } from "motion/react";
 import { useMemo, useRef } from "react";
+import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
 const BELIEF_STATEMENT =
   "Localized cryotherapy brings focused cold therapy into the moments where comfort, performance, and care matter most. Atmos exists to help you deliver that experience with exceptional equipment, thoughtful training, and support that carries beyond the sale.";
@@ -25,18 +26,20 @@ export default function BeliefStatementSection({
   className = "",
 }: BeliefStatementSectionProps) {
   return (
-    <section
-      id="belief"
-      aria-label="Atmos belief statement"
-      className={`relative w-full overflow-hidden bg-[var(--atmos-canvas)] px-6 py-24 sm:px-8 md:py-48 ${className}`}
-    >
-      <div className="relative mx-auto max-w-4xl">
-        <ScrollRevealParagraph
-          text={BELIEF_STATEMENT}
-          className="text-balance text-center text-base font-medium leading-[1.8] text-[var(--atmos-ink)] sm:text-lg md:text-xl lg:text-2xl"
-        />
-      </div>
-    </section>
+    <LazyMotionProvider>
+      <section
+        id="belief"
+        aria-label="Atmos belief statement"
+        className={`relative w-full overflow-hidden bg-[var(--atmos-canvas)] px-6 py-24 sm:px-8 md:py-48 ${className}`}
+      >
+        <div className="relative mx-auto max-w-4xl">
+          <ScrollRevealParagraph
+            text={BELIEF_STATEMENT}
+            className="text-balance text-center text-base font-medium leading-[1.8] text-[var(--atmos-ink)] sm:text-lg md:text-xl lg:text-2xl"
+          />
+        </div>
+      </section>
+    </LazyMotionProvider>
   );
 }
 
@@ -51,7 +54,14 @@ function ScrollRevealParagraph({
   });
   const shouldReduceMotion = useReducedMotion();
 
-  const words = useMemo(() => text.trim().split(/\s+/), [text]);
+  const words = useMemo(
+    () =>
+      Array.from(text.matchAll(/\S+/g), (match) => ({
+        key: `${match[0]}-${match.index ?? 0}`,
+        value: match[0],
+      })),
+    [text],
+  );
 
   if (shouldReduceMotion) {
     return (
@@ -68,8 +78,8 @@ function ScrollRevealParagraph({
       <span aria-hidden="true">
         {words.map((word, index) => (
           <RevealWord
-            key={`${word}-${index}`}
-            word={word}
+            key={word.key}
+            word={word.value}
             index={index}
             isInView={isInView}
           />
@@ -84,7 +94,7 @@ function RevealWord({ word, index, isInView }: RevealWordProps) {
     <span className="relative mr-[0.28em] inline-block">
       <span className="text-[color:rgba(15,16,18,0.2)]">{word}</span>
 
-      <motion.span
+      <m.span
         className="absolute inset-0 text-[var(--atmos-ink)]"
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 1 : 0 }}
@@ -95,7 +105,7 @@ function RevealWord({ word, index, isInView }: RevealWordProps) {
         }}
       >
         {word}
-      </motion.span>
+      </m.span>
     </span>
   );
 }
