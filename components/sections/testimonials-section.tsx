@@ -35,18 +35,18 @@ export default function TestimonialsSection() {
       <section
         ref={sectionRef}
         id="testimonials"
-        className="w-full bg-[var(--atmos-page)] px-6 py-24 sm:px-8 md:py-32"
+        className="w-full bg-[var(--atmos-page)] px-6 pb-20 pt-10 sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto max-w-[1180px]">
-          <div className="mb-10 max-w-2xl">
+          <div className="mb-8 max-w-2xl sm:mb-10">
             <m.h2
-              className="mt-5 text-4xl font-medium leading-[1.08] text-[var(--atmos-ink)] md:text-5xl"
+              className="text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl md:text-5xl"
               {...animateProps(0)}
             >
               Trusted by providers
             </m.h2>
             <m.p
-              className="mt-5 text-lg leading-8 text-[var(--atmos-secondary)] md:text-xl"
+              className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"
               {...animateProps(0.06)}
             >
               See how teams and businesses are using Atmos to deliver focused
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
                 </CardHeader>
                 <CardContent>
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-xl font-medium text-[var(--atmos-ink)]">
+                    <p className="text-lg font-medium leading-7 text-[var(--atmos-ink)] sm:text-xl sm:leading-normal">
                       Atmos has become essential to our recovery protocols. The
                       portability lets us treat patients anywhere in the clinic,
                       and the training gave our team confidence from day one.
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face"
                           alt="Dr. Sarah Mitchell"
                         />
-                        <AvatarFallback className="bg-[#e6e6e9] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           SM
                         </AvatarFallback>
                       </Avatar>
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
               <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none md:col-span-2">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-xl font-medium text-[var(--atmos-ink)]">
+                    <p className="text-lg font-medium leading-7 text-[var(--atmos-ink)] sm:text-xl sm:leading-normal">
                       We needed cryotherapy that could travel with our athletes.
                       Atmos delivers exactly that: professional-grade treatment
                       without the facility constraints. Our sports medicine team
@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face"
                           alt="James Chen"
                         />
-                        <AvatarFallback className="bg-[#e6e6e9] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           JC
                         </AvatarFallback>
                       </Avatar>
@@ -139,7 +139,7 @@ export default function TestimonialsSection() {
               <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none h-full">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-[var(--atmos-ink)]">
+                    <p className="leading-7 text-[var(--atmos-ink)]">
                       The setup was straightforward, and the support team
                       actually helped us think through our service offerings.
                       It&apos;s rare to find equipment that comes with this
@@ -152,7 +152,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face"
                           alt="Maria Rodriguez"
                         />
-                        <AvatarFallback className="bg-[#e6e6e9] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           MR
                         </AvatarFallback>
                       </Avatar>
@@ -175,7 +175,7 @@ export default function TestimonialsSection() {
               <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none h-full">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-[var(--atmos-ink)]">
+                    <p className="leading-7 text-[var(--atmos-ink)]">
                       Our athletes request Atmos by name now. The targeted
                       approach means we can treat specific areas without
                       full-body exposure. It&apos;s changed how we handle acute
@@ -188,7 +188,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
                           alt="David Park"
                         />
-                        <AvatarFallback className="bg-[#e6e6e9] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           DP
                         </AvatarFallback>
                       </Avatar>

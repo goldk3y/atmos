@@ -69,12 +69,14 @@
 :root {
   --atmos-ink: #0f1012;
   --atmos-graphite: #020201;
-  --atmos-page: #f2f2f4;
+  --atmos-light-gray: #f5f5f7;
+  --atmos-page: var(--atmos-light-gray);
   --atmos-canvas: #fdfdfd;
   --atmos-muted: #868788;
   --atmos-secondary: #6f7377;
   --atmos-border: #dedee2;
   --atmos-blue: #0071e3;
+  --atmos-green: #34c759;
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
@@ -114,6 +116,8 @@
 }
 
 .dark {
+  --atmos-green: #30d158;
+
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

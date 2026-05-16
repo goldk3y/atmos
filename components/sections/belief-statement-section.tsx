@@ -30,12 +30,12 @@ export default function BeliefStatementSection({
       <section
         id="belief"
         aria-label="Atmos belief statement"
-        className={`relative w-full overflow-hidden bg-[var(--atmos-canvas)] px-6 py-24 sm:px-8 md:py-48 ${className}`}
+        className={`relative w-full overflow-hidden bg-[var(--atmos-canvas)] px-6 py-32 sm:px-8 sm:py-36 md:py-48 ${className}`}
       >
         <div className="relative mx-auto max-w-4xl">
           <ScrollRevealParagraph
             text={BELIEF_STATEMENT}
-            className="text-balance text-center text-base font-medium leading-[1.8] text-[var(--atmos-ink)] sm:text-lg md:text-xl lg:text-2xl"
+            className="text-balance text-center text-xl font-medium leading-[1.65] text-[var(--atmos-ink)] sm:text-xl sm:leading-[1.7] lg:text-2xl"
           />
         </div>
       </section>

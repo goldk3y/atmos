@@ -58,7 +58,7 @@ export default function VideoSwipeSection() {
       <section
         ref={sectionRef}
         id="video-stories"
-        className="w-full overflow-hidden bg-[var(--atmos-page)] px-6 py-24 sm:px-8 md:py-32"
+        className="w-full overflow-hidden bg-[var(--atmos-page)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
       >
         <style>{`
         .video-swipe-carousel {
@@ -103,7 +103,7 @@ export default function VideoSwipeSection() {
         <div className="mx-auto max-w-[1180px]">
           <div className="mx-auto max-w-3xl text-center">
             <m.h2
-              className="text-4xl font-medium leading-[1.08] text-[var(--atmos-ink)] md:text-5xl"
+              className="text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl md:text-5xl"
               initial={
                 shouldReduceMotion
                   ? false
@@ -119,7 +119,7 @@ export default function VideoSwipeSection() {
               Watch Atmos in motion
             </m.h2>
             <m.p
-              className="mt-5 text-lg leading-8 text-[var(--atmos-secondary)] md:text-xl"
+              className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"
               initial={
                 shouldReduceMotion
                   ? false
@@ -138,7 +138,7 @@ export default function VideoSwipeSection() {
           </div>
 
           <m.div
-            className="relative mx-auto mt-14 max-w-6xl px-0 sm:px-10"
+            className="relative mx-auto mt-10 max-w-6xl px-0 sm:mt-14 sm:px-10"
             initial={
               shouldReduceMotion
                 ? false
@@ -182,7 +182,7 @@ export default function VideoSwipeSection() {
                 <SwiperSlide key={video.title}>
                   <button
                     type="button"
-                    className="group relative block h-full w-full overflow-hidden rounded-2xl bg-[#e6e6e9] text-left shadow-[0_24px_70px_rgba(15,16,18,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]"
+                    className="group relative block h-full w-full overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] text-left shadow-[0_24px_70px_rgba(15,16,18,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]"
                     onClick={() => setActiveVideo(video)}
                     aria-label={`Play ${video.title}`}
                   >
@@ -199,8 +199,8 @@ export default function VideoSwipeSection() {
                         <Play className="size-8 fill-white text-white" />
                       </div>
                     </div>
-                    <div className="absolute bottom-0 left-0 p-6 sm:p-8">
-                      <h3 className="text-2xl font-medium text-white">
+                    <div className="absolute bottom-0 left-0 p-5 sm:p-8">
+                      <h3 className="text-xl font-medium leading-7 text-white sm:text-2xl">
                         {video.title}
                       </h3>
                       <p className="mt-1 text-sm text-white/80">
@@ -215,7 +215,7 @@ export default function VideoSwipeSection() {
             <button
               type="button"
               onClick={() => swiperRef.current?.slidePrev()}
-              className="video-swipe-prev absolute left-0 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:size-12"
+              className="video-swipe-prev absolute left-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:left-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
               aria-label="Previous video"
             >
               <ChevronLeftIcon className="size-5" strokeWidth={1.8} />
@@ -224,7 +224,7 @@ export default function VideoSwipeSection() {
             <button
               type="button"
               onClick={() => swiperRef.current?.slideNext()}
-              className="video-swipe-next absolute right-0 top-1/2 z-30 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:size-12"
+              className="video-swipe-next absolute right-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:right-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
               aria-label="Next video"
             >
               <ChevronRightIcon className="size-5" strokeWidth={1.8} />

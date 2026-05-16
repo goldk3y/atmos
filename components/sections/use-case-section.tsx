@@ -43,19 +43,20 @@ export default function UseCaseSection() {
   return (
     <section
       id="use-cases"
-      className="w-full bg-[var(--atmos-canvas)] px-6 py-24 sm:px-8 md:py-32"
+      className="w-full bg-[var(--atmos-canvas)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
     >
       <div className="mx-auto max-w-[1180px]">
         <div className="max-w-3xl">
-          <h2 className="text-4xl font-medium leading-[1.05] text-[var(--atmos-ink)] md:text-5xl text-balance">
+          <h2 className="text-balance text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.05] md:text-5xl">
             See how Atmos fits into your business.
           </h2>
-          <p className="mt-5 text-lg leading-8 text-[var(--atmos-secondary)] md:text-xl">
-            Atmos is designed for operators who need focused cold therapy to fit into real service environments, not force a new facility model.
+          <p className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl">
+            Atmos is designed for operators who need focused cold therapy to fit
+            into real service environments, not force a new facility model.
           </p>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10 sm:mt-12">
           <ExpandableCards cards={useCases} />
         </div>
       </div>

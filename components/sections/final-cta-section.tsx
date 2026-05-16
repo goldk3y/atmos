@@ -19,11 +19,11 @@ export default function FinalCTASection() {
       <section
         ref={sectionRef}
         id="demo"
-        className="w-full bg-[#0f1012] px-6 py-24 text-white sm:px-8 md:py-32"
+        className="w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
           <m.h2
-            className="max-w-3xl text-4xl font-medium leading-[1.05] md:text-6xl"
+            className="max-w-3xl text-3xl font-medium leading-[1.08] sm:text-4xl sm:leading-[1.05] md:text-6xl"
             initial={
               shouldReduceMotion
                 ? false
@@ -39,7 +39,7 @@ export default function FinalCTASection() {
             Bring localized cryotherapy into your service mix.
           </m.h2>
           <m.p
-            className="mt-6 max-w-2xl text-lg leading-8 text-white/68 md:text-xl"
+            className="mt-4 max-w-2xl text-base leading-7 text-white/68 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
             initial={
               shouldReduceMotion
                 ? false
@@ -58,7 +58,7 @@ export default function FinalCTASection() {
           </m.p>
 
           <m.div
-            className="mt-9 flex w-full max-w-sm flex-col justify-center gap-3 sm:max-w-none sm:flex-row"
+            className="mt-7 flex w-full max-w-sm flex-col justify-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row"
             initial={
               shouldReduceMotion
                 ? false
@@ -72,8 +72,8 @@ export default function FinalCTASection() {
             transition={{ duration: 0.45, delay: 0.2, ease: EASE_OUT }}
           >
             <a
-              href="#demo"
-              className="rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
+              href="/book-demo"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
             >
               Schedule a Consultation
             </a>

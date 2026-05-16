@@ -84,7 +84,7 @@ export default function ExpandableCards({
         className={`flex w-full flex-col gap-4 overflow-hidden ${className}`}
       >
         <div
-          className="scrollbar-hide flex w-full gap-4 overflow-x-auto pb-8 pt-4"
+          className="scrollbar-hide flex w-full gap-3 overflow-x-auto pb-7 pt-2 sm:gap-4 sm:pb-8 sm:pt-4"
           ref={scrollRef}
           style={{
             scrollSnapType: "x mandatory",
@@ -96,11 +96,11 @@ export default function ExpandableCards({
               animate={{
                 width:
                   selectedCard === card.id
-                    ? "clamp(32rem, 88vw, 40rem)"
-                    : "clamp(16.5rem, calc((100vw - 7.5rem) / 4), 17.625rem)",
+                    ? "clamp(20rem, 88vw, 40rem)"
+                    : "clamp(14.75rem, 72vw, 17.625rem)",
               }}
               aria-label={`${card.title} card${selectedCard === card.id ? ", expanded" : ""}`}
-              className={`group relative h-[clamp(18rem,44vw,24rem)] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 ${cardClassName}`}
+              className={`group relative h-[clamp(17rem,72vw,24rem)] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 ${cardClassName}`}
               data-card-id={card.id}
               data-selected={selectedCard === card.id ? "true" : undefined}
               key={card.id}
@@ -129,8 +129,7 @@ export default function ExpandableCards({
               <div
                 className="relative h-full"
                 style={{
-                  width:
-                    "clamp(16.5rem, calc((100vw - 7.5rem) / 4), 17.625rem)",
+                  width: "clamp(14.75rem, 72vw, 17.625rem)",
                 }}
               >
                 <Image
@@ -141,8 +140,8 @@ export default function ExpandableCards({
                   src={card.image || "/placeholder.svg"}
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(2,2,1,0.78),rgba(2,2,1,0.18)_56%,rgba(2,2,1,0.04))]" />
-                <div className="absolute inset-0 flex items-end p-6 text-white">
-                  <h2 className="text-2xl font-medium leading-7 text-white">
+                <div className="absolute inset-0 flex items-end p-5 text-white sm:p-6">
+                  <h2 className="text-xl font-medium leading-7 text-white sm:text-2xl">
                     {card.title}
                   </h2>
                 </div>
@@ -154,12 +153,12 @@ export default function ExpandableCards({
                       shouldReduceMotion
                         ? {
                             width:
-                              "calc(100% - clamp(16.5rem, calc((100vw - 7.5rem) / 4), 17.625rem))",
+                              "calc(100% - clamp(14.75rem, 72vw, 17.625rem))",
                             opacity: 1,
                           }
                         : {
                             width:
-                              "calc(100% - clamp(16.5rem, calc((100vw - 7.5rem) / 4), 17.625rem))",
+                              "calc(100% - clamp(14.75rem, 72vw, 17.625rem))",
                             opacity: 1,
                             filter: "blur(0px)",
                           }
@@ -191,7 +190,7 @@ export default function ExpandableCards({
                           ? { opacity: 1, x: 0 }
                           : { opacity: 1, x: 0, filter: "blur(0px)" }
                       }
-                      className="flex h-full flex-col justify-between p-8"
+                      className="flex h-full flex-col justify-between p-5 sm:p-8"
                       exit={
                         shouldReduceMotion
                           ? { opacity: 0, x: 20 }
@@ -209,15 +208,15 @@ export default function ExpandableCards({
                       }
                     >
                       <div>
-                        <h3 className="text-2xl font-medium leading-8 text-[var(--atmos-ink)]">
+                        <h3 className="text-xl font-medium leading-7 text-[var(--atmos-ink)] sm:text-2xl sm:leading-8">
                           {card.title}
                         </h3>
                         {card.summary && (
-                          <p className="mt-3 text-base font-medium leading-6 text-[var(--atmos-ink)]">
+                          <p className="mt-3 text-sm font-medium leading-6 text-[var(--atmos-ink)] sm:text-base">
                             {card.summary}
                           </p>
                         )}
-                        <p className="mt-5 text-sm leading-6 text-[var(--atmos-secondary)]">
+                        <p className="mt-4 text-sm leading-6 text-[var(--atmos-secondary)] sm:mt-5">
                           {card.content}
                         </p>
                         {card.link && (

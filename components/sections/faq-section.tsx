@@ -60,12 +60,12 @@ export default function FAQSection() {
       <section
         ref={sectionRef}
         id="faq"
-        className="w-full bg-[var(--atmos-page)] px-6 py-24 sm:px-8 md:py-32"
+        className="w-full bg-[var(--atmos-page)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto max-w-[1180px]">
-          <div className="mb-10 max-w-3xl mx-auto text-center">
+          <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
             <m.h2
-              className="text-4xl font-medium leading-[1.08] text-[var(--atmos-ink)] md:text-5xl"
+              className="text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl md:text-5xl"
               initial={
                 shouldReduceMotion
                   ? false
@@ -81,7 +81,7 @@ export default function FAQSection() {
               Frequently Asked Questions
             </m.h2>
             <m.p
-              className="mt-5 text-lg leading-8 text-[var(--atmos-secondary)] md:text-xl"
+              className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"
               initial={
                 shouldReduceMotion
                   ? false
@@ -100,7 +100,7 @@ export default function FAQSection() {
           </div>
 
           <m.div
-            className="mx-auto mt-12 max-w-3xl"
+            className="mx-auto mt-10 max-w-3xl sm:mt-12"
             initial={
               shouldReduceMotion
                 ? false
@@ -116,7 +116,7 @@ export default function FAQSection() {
             <Accordion
               type="single"
               collapsible
-              className="w-full rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-8 py-3 shadow-none"
+              className="w-full rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-5 py-2 shadow-none sm:px-8 sm:py-3"
             >
               {faqItems.map((item, index) => (
                 <AccordionItem
@@ -128,7 +128,7 @@ export default function FAQSection() {
                       : "border-dashed"
                   }
                 >
-                  <AccordionTrigger className="cursor-pointer text-base font-medium text-[var(--atmos-ink)] hover:no-underline">
+                  <AccordionTrigger className="cursor-pointer text-left text-base font-medium leading-6 text-[var(--atmos-ink)] hover:no-underline">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent>
@@ -140,10 +140,10 @@ export default function FAQSection() {
               ))}
             </Accordion>
 
-            <p className="mt-6 px-8 text-center text-[var(--atmos-secondary)]">
+            <p className="mt-6 px-2 text-center text-sm leading-6 text-[var(--atmos-secondary)] sm:px-8 sm:text-base">
               Can&apos;t find what you&apos;re looking for? Contact our{" "}
               <Link
-                href="#demo"
+                href="/book-demo"
                 className="font-medium text-[var(--atmos-blue)] hover:underline"
               >
                 support team

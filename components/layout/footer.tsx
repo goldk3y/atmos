@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import type { ComponentProps, ReactNode } from "react";
 import { m, useReducedMotion } from "motion/react";
-import { Frame } from "lucide-react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
 const COPYRIGHT_YEAR = 2026;
@@ -31,8 +31,8 @@ const footerLinks: FooterSection[] = [
     label: "Company",
     links: [
       { title: "FAQ", href: "#faq" },
-      { title: "Book a Demo", href: "#demo" },
-      { title: "Support", href: "#demo" },
+      { title: "Book a Demo", href: "/book-demo" },
+      { title: "Support", href: "/book-demo" },
     ],
   },
   {
@@ -53,7 +53,13 @@ export function Footer() {
 
         <div className="grid w-full max-w-[1180px] gap-12 xl:grid-cols-3 xl:gap-16">
           <AnimatedContainer className="space-y-4">
-            <Frame className="size-8" />
+            <Image
+              src="/atmos-logo.svg"
+              alt="Atmos"
+              width={120}
+              height={45}
+              className="h-8 w-auto brightness-0 invert"
+            />
             <p className="mt-6 max-w-xs text-sm leading-6 text-white/48 md:mt-8">
               © <time dateTime={`${COPYRIGHT_YEAR}`}>{COPYRIGHT_YEAR}</time>{" "}
               Atmos. All rights reserved.

@@ -22,11 +22,11 @@ export default function OperatorSupportBentoSection() {
       <section
         ref={sectionRef}
         id="features"
-        className="w-full bg-[var(--atmos-page)] px-6 py-24 sm:px-8 md:py-32"
+        className="w-full bg-[var(--atmos-page)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto flex max-w-[1180px] flex-col">
           <m.h2
-            className="mt-5 max-w-3xl text-4xl font-medium leading-[1.05] text-[var(--atmos-ink)] md:text-5xl"
+            className="max-w-3xl text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.05] md:text-5xl"
             initial={
               shouldReduceMotion
                 ? false
@@ -39,11 +39,11 @@ export default function OperatorSupportBentoSection() {
             }
             transition={{ duration: 0.5, ease: EASE_OUT }}
           >
-            Built to help you deliver
+            Designed to help you deliver
           </m.h2>
 
           <m.p
-            className="mt-5 max-w-2xl text-lg leading-8 text-[var(--atmos-secondary)] md:text-xl"
+            className="mt-4 max-w-2xl text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"
             initial={
               shouldReduceMotion
                 ? false
@@ -60,7 +60,7 @@ export default function OperatorSupportBentoSection() {
             cryotherapy become a service you can offer professionally.
           </m.p>
 
-          <div className="mt-12 grid grid-cols-1 gap-5 sm:mt-16 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-14 lg:grid-cols-3">
             {[
               {
                 eyebrow: "Equipment",
@@ -150,8 +150,8 @@ function BentoCard({
         "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[#cfcfd5]",
       )}
     >
-      <div className="relative h-[18rem] shrink-0 p-[var(--card-padding)]">
-        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[var(--image-radius)] bg-[#e6e6e9]">
+      <div className="relative h-56 shrink-0 p-[var(--card-padding)] sm:h-[18rem]">
+        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[var(--image-radius)] bg-[var(--atmos-light-gray)]">
           <ImageIcon className="size-16 text-[var(--atmos-muted)]" />
           <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(253,253,253,0.08),rgba(15,16,18,0.14))]" />
 
@@ -165,16 +165,16 @@ function BentoCard({
         </div>
       </div>
 
-      <div className="relative isolate z-20 flex min-h-[15rem] flex-col p-8 text-[var(--atmos-ink)]">
+      <div className="relative isolate z-20 flex min-h-[13rem] flex-col p-6 text-[var(--atmos-ink)] sm:min-h-[15rem] sm:p-8">
         <p className="text-sm font-medium uppercase tracking-[0.16em] text-[var(--atmos-muted)]">
           {eyebrow}
         </p>
 
-        <p className="mt-4 text-2xl font-medium leading-8 text-[var(--atmos-ink)]">
+        <p className="mt-3 text-xl font-medium leading-7 text-[var(--atmos-ink)] sm:mt-4 sm:text-2xl sm:leading-8">
           {title}
         </p>
 
-        <p className="mt-4 max-w-[600px] text-sm leading-6 text-[var(--atmos-secondary)]">
+        <p className="mt-3 max-w-[600px] text-sm leading-6 text-[var(--atmos-secondary)] sm:mt-4">
           {description}
         </p>
 

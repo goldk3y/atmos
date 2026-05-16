@@ -20,7 +20,7 @@ export default function VideoSection() {
       <section
         ref={sectionRef}
         id="walkthrough"
-        className="w-full bg-[var(--atmos-page)] px-6 py-24 sm:px-8 md:py-32"
+        className="w-full bg-[var(--atmos-page)] px-6 pb-10 pt-20 sm:px-8 sm:py-24 md:py-32"
       >
         <m.div
           className="mx-auto max-w-[1180px]"
