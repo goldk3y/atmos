@@ -21,12 +21,13 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
       <section
         className="relative flex w-full flex-col bg-[var(--atmos-page)]"
         style={{
-          minHeight: 'calc(100svh - 80px)', // svh is stable on load, account for navbar
+          height: '100svh', // Exactly fills viewport, no extra space
         }}
       >
         {/* Main hero content - grows to fill available space */}
-        <div className="flex flex-1 items-center">
-          <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-8 px-6 py-12 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-12">
+        <div className="flex flex-1 items-center pt-20">
+          {/* pt-20 (80px) accounts for floating navbar */}
+          <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-8 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
             {/* Text Content */}
             <div className="flex flex-col justify-center">
               <m.h1
