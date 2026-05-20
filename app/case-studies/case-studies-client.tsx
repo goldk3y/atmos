@@ -78,6 +78,7 @@ const CASE_STUDIES = [
 
 export function CaseStudiesClient() {
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
+  const [hasInteracted, setHasInteracted] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const filteredCaseStudies =
@@ -133,7 +134,10 @@ export function CaseStudiesClient() {
               {CATEGORIES.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={() => {
+                    setHasInteracted(true);
+                    setActiveCategory(category.id);
+                  }}
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
                     activeCategory === category.id
@@ -163,6 +167,7 @@ export function CaseStudiesClient() {
                   study={study}
                   index={index}
                   shouldReduceMotion={!!shouldReduceMotion}
+                  skipAnimation={hasInteracted}
                 />
               ))}
             </m.div>
@@ -191,25 +196,31 @@ function CaseStudyCard({
   study,
   index,
   shouldReduceMotion,
+  skipAnimation,
 }: {
   study: (typeof CASE_STUDIES)[number];
   index: number;
   shouldReduceMotion: boolean;
+  skipAnimation: boolean;
 }) {
+  const noAnimation = skipAnimation || shouldReduceMotion;
   return (
     <m.article
       initial={
-        shouldReduceMotion
+        noAnimation
           ? false
           : { opacity: 0, transform: "translateY(20px) scale(0.98)" }
       }
       animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
-      transition={{
-        duration: 0.5,
-        delay: 0.45 + index * 0.06,
-        ease: EASE_OUT,
-      }}
-      layout
+      transition={
+        noAnimation
+          ? { duration: 0 }
+          : {
+              duration: 0.5,
+              delay: 0.45 + index * 0.06,
+              ease: EASE_OUT,
+            }
+      }
       className={cn(
         "group relative flex transform-gpu flex-col overflow-hidden rounded-[1.25rem]",
         "bg-[var(--atmos-page)] ring-1 ring-[var(--atmos-border)]",

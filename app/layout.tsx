@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  getOrganizationSchema,
+  getWebSiteSchema,
+  combineSchemas,
+} from "@/lib/structured-data";
+import { SupportChat } from "@/components/support-chat";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atmosperformance.com";
@@ -55,12 +62,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Combine Organization and WebSite schemas for the root layout
+  const structuredData = combineSchemas(
+    getOrganizationSchema(),
+    getWebSiteSchema()
+  );
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <JsonLd data={structuredData} />
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <SupportChat />
+      </body>
     </html>
   );
 }

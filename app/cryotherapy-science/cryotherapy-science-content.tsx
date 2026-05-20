@@ -80,7 +80,7 @@ function IntroductionSection() {
         transition={{ duration: 0.6, ease: EASE_OUT }}
       >
         <p className="text-lg leading-8 text-[var(--atmos-secondary)] sm:text-xl sm:leading-9">
-          You've probably heard of cryotherapy. Maybe you've seen athletes stepping into freezing chambers or celebrities touting cold therapy benefits. But beneath the buzz, there's real science: decades of peer-reviewed research documenting exactly what happens when cold meets the human body.
+          You&apos;ve probably heard of cryotherapy. Maybe you&apos;ve seen athletes stepping into freezing chambers or celebrities touting cold therapy benefits. But beneath the buzz, there&apos;s real science: decades of peer-reviewed research documenting exactly what happens when cold meets the human body.
         </p>
         <p className="mt-6 text-lg leading-8 text-[var(--atmos-secondary)] sm:text-xl sm:leading-9">
           This page is our attempt to lay it out clearly: what cryotherapy is, how it works, what the evidence actually shows, and what claims you should be skeptical of. We cite our sources, acknowledge limitations, and let you decide.
@@ -114,7 +114,7 @@ function WhatIsCryotherapySection() {
           What is cryotherapy?
         </h2>
         <p className="mt-6 text-lg leading-8 text-[var(--atmos-secondary)]">
-          Cryotherapy, from the Greek <em>kryos</em> (meaning "icy cold"), is simply the therapeutic use of cold. Ice packs, cold showers, ice baths, and high-tech cryo chambers are all forms of cryotherapy. The idea isn't new: cold has been used medicinally for thousands of years.
+          Cryotherapy, from the Greek <em>kryos</em> (meaning &quot;icy cold&quot;), is simply the therapeutic use of cold. Ice packs, cold showers, ice baths, and high-tech cryo chambers are all forms of cryotherapy. The idea isn&apos;t new: cold has been used medicinally for thousands of years.
         </p>
         <p className="mt-6 text-lg leading-8 text-[var(--atmos-secondary)]">
           The Edwin Smith Papyrus from ancient Egypt (~2500 BCE) describes using cold to treat injuries. Hippocrates recommended cold for swelling and pain. In 1845, English physician James Arnott used salt-ice mixtures to treat tumors and nerve pain.
@@ -279,7 +279,7 @@ function HowItWorksSection() {
           <li className="flex gap-4">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-white">3</span>
             <div>
-              <strong className="text-[var(--atmos-ink)]">Thermal shock:</strong> The sudden cold activates your body's response systems, triggering changes in blood flow, nerve signaling, and chemical release that we'll explain next.
+              <strong className="text-[var(--atmos-ink)]">Thermal shock:</strong> The sudden cold activates your body&apos;s response systems, triggering changes in blood flow, nerve signaling, and chemical release that we&apos;ll explain next.
             </div>
           </li>
         </ol>
@@ -341,10 +341,10 @@ function WhatHappensInYourBodySection() {
         {/* Mechanism 2 */}
         <div className="mt-10">
           <h3 className="text-xl font-semibold text-[var(--atmos-ink)]">
-            The "flush" effect
+            The &quot;flush&quot; effect
           </h3>
           <p className="mt-4 text-lg leading-8 text-[var(--atmos-secondary)]">
-            Cold first causes blood vessels to tighten (reducing swelling). Then, as your body warms back up, those vessels open wide, flooding the area with fresh, oxygenated blood. Scientists call this the "hunting response," first documented by Sir Thomas Lewis in 1930. It's why people often feel energized and notice a healthy flush after cold therapy.
+            Cold first causes blood vessels to tighten (reducing swelling). Then, as your body warms back up, those vessels open wide, flooding the area with fresh, oxygenated blood. Scientists call this the &quot;hunting response,&quot; first documented by Sir Thomas Lewis in 1930. It&apos;s why people often feel energized and notice a healthy flush after cold therapy.
           </p>
           <p className="mt-3 text-sm text-[var(--atmos-muted)]">
             Source: <a href="https://en.wikipedia.org/wiki/Hunting_reaction" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Lewis, <em>Heart</em>, 1930</a>
@@ -370,7 +370,7 @@ function WhatHappensInYourBodySection() {
             Natural chemical release
           </h3>
           <p className="mt-4 text-lg leading-8 text-[var(--atmos-secondary)]">
-            Cold exposure triggers your body to release norepinephrine (linked to focus and alertness) and endorphins (natural painkillers). One study found norepinephrine levels increased by 200–530% during cold exposure. This may explain why many people report feeling more awake, focused, and positive after cold therapy. It's not just placebo; there's a measurable chemical change.
+            Cold exposure triggers your body to release norepinephrine (linked to focus and alertness) and endorphins (natural painkillers). One study found norepinephrine levels increased by 200–530% during cold exposure. This may explain why many people report feeling more awake, focused, and positive after cold therapy. It&apos;s not just placebo; there&apos;s a measurable chemical change.
           </p>
           <p className="mt-3 text-sm text-[var(--atmos-muted)]">
             Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/10751106/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Šrámek et al., 2000</a>; <a href="https://www.tandfonline.com/doi/full/10.1080/00365510701516350" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Leppäluoto et al., 2008</a>
@@ -405,7 +405,7 @@ function EvidenceSection() {
           What the research shows
         </h2>
         <p className="mt-6 text-lg leading-8 text-[var(--atmos-secondary)]">
-          Cryotherapy has been studied extensively in peer-reviewed journals including the <em>New England Journal of Medicine</em>, <em>British Journal of Sports Medicine</em>, and <em>Orthopaedic Surgery</em>. Here's what the research tells us.
+          Cryotherapy has been studied extensively in peer-reviewed journals including the <em>New England Journal of Medicine</em>, <em>British Journal of Sports Medicine</em>, and <em>Orthopaedic Surgery</em>. Here&apos;s what the research tells us.
         </p>
 
         {/* Pull Quote */}
@@ -496,7 +496,7 @@ function EvidenceSection() {
             Skin and aesthetics
           </h3>
           <p className="mt-4 text-lg leading-8 text-[var(--atmos-secondary)]">
-            The vasoconstriction-vasodilation cycle improves local blood flow and oxygen delivery to the skin. Cold activates fibroblasts and may stimulate collagen production. Clinically, cold therapy reduces puffiness, tightens pores, and produces the visible "flush" that clients notice immediately after treatment. Studies have also shown benefits for eczema and psoriasis, with reduced itching and improved skin appearance.
+            The vasoconstriction-vasodilation cycle improves local blood flow and oxygen delivery to the skin. Cold activates fibroblasts and may stimulate collagen production. Clinically, cold therapy reduces puffiness, tightens pores, and produces the visible &quot;flush&quot; that clients notice immediately after treatment. Studies have also shown benefits for eczema and psoriasis, with reduced itching and improved skin appearance.
           </p>
           <p className="mt-3 text-sm text-[var(--atmos-muted)]">
             Sources: <a href="https://jcadonline.com/keloids-scars-treatment-review/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]"><em>J Clin Aesthet Dermatol</em>, 2020</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/33538104/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Lee et al., 2021</a>
@@ -508,7 +508,7 @@ function EvidenceSection() {
             Mood and alertness
           </h3>
           <p className="mt-4 text-lg leading-8 text-[var(--atmos-secondary)]">
-            The "energized" feeling people report after cold therapy isn't imaginary. Cold exposure triggers a surge in norepinephrine, the neurotransmitter linked to focus and mood. One study found a single cold water session increased norepinephrine by 530% and dopamine by 250%. Long-term research showed these effects don't diminish over time. This may explain why cold therapy has been studied as an add-on treatment for depression, with some trials showing significant improvement in mood scores.
+            The &quot;energized&quot; feeling people report after cold therapy isn&apos;t imaginary. Cold exposure triggers a surge in norepinephrine, the neurotransmitter linked to focus and mood. One study found a single cold water session increased norepinephrine by 530% and dopamine by 250%. Long-term research showed these effects don&apos;t diminish over time. This may explain why cold therapy has been studied as an add-on treatment for depression, with some trials showing significant improvement in mood scores.
           </p>
           <p className="mt-3 text-sm text-[var(--atmos-muted)]">
             Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/10751106/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Šrámek et al., <em>Eur J Appl Physiol</em>, 2000</a>; <a href="https://www.tandfonline.com/doi/full/10.1080/00365510701516350" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--atmos-blue)]">Leppäluoto et al., 2008</a>
@@ -704,7 +704,7 @@ function ClosingSection() {
         transition={{ duration: 0.6, ease: EASE_OUT }}
       >
         <p className="text-lg leading-8 text-[var(--atmos-secondary)] sm:text-xl">
-          We built this page because we believe informed buyers make better decisions. If you have questions about how localized cryotherapy might fit your practice, we're happy to talk through the evidence with you.
+          We built this page because we believe informed buyers make better decisions. If you have questions about how localized cryotherapy might fit your practice, we&apos;re happy to talk through the evidence with you.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

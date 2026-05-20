@@ -23,7 +23,7 @@ export default function ProblemStatement({ problem }: ProblemStatementProps) {
     <LazyMotionProvider>
       <section
         ref={sectionRef}
-        className="w-full bg-[var(--atmos-light-gray)] px-6 py-16 sm:px-8 sm:py-20 md:py-24"
+        className="w-full bg-[var(--atmos-light-gray)] px-6 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-40 md:pb-24 md:pt-52"
       >
         <div className="mx-auto max-w-3xl text-center">
           <m.p

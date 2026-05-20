@@ -123,7 +123,7 @@ export default function HeroSection() {
             type="button"
             aria-label="Scroll to next section"
             onClick={scrollToNextSection}
-            className="absolute bottom-6 left-1/2 z-30 flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-white/40 bg-white/70 text-black backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20 sm:bottom-8 sm:size-14"
+            className="absolute bottom-4 left-1/2 z-30 flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-white/40 bg-white/70 text-black backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20 sm:size-14"
             initial={{
               opacity: 0,
               transform: "translateX(-50%) translateY(10px)",

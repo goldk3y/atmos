@@ -166,7 +166,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
         window.removeEventListener("message", handleEventScheduled);
       };
     }
-  }, [step]);
+  }, [step, onEventScheduled]);
 
   return (
     <LazyMotionProvider>

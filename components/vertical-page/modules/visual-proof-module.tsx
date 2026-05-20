@@ -13,7 +13,7 @@ interface VisualProofModuleProps {
 }
 
 export default function VisualProofModule({
-  visualProof,
+  visualProof: _visualProof,
 }: VisualProofModuleProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, {

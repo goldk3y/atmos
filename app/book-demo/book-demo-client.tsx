@@ -5,7 +5,7 @@ import { useState } from "react";
 import { DemoBookingFlow } from "@/components/booking/demo-booking-flow";
 
 export function BookDemoClient() {
-  const [eventScheduled, setEventScheduled] = useState(false);
+  const [_eventScheduled, setEventScheduled] = useState(false);
 
   return (
     <main className="flex min-h-screen flex-col bg-[var(--atmos-page)]">

@@ -15,7 +15,7 @@ import { MainNavigation } from "./main-navigation";
 export default function NavBar({
   alwaysVisible = false,
   ctaHref = "/book-demo",
-  links = [],
+  links: _links = [],
 }: {
   alwaysVisible?: boolean;
   ctaHref?: string;
@@ -78,7 +78,7 @@ export default function NavBar({
         }
         aria-hidden={!effectiveIsVisible}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full bg-white/80 px-3 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] backdrop-blur-sm">
+        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full border-[0.5px] border-gray-200 bg-white/80 px-3 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] backdrop-blur-sm">
           <Link
             href="/"
             className="group rounded-full pl-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)]"
@@ -92,7 +92,7 @@ export default function NavBar({
             />
           </Link>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:items-center">
             <MainNavigation />
           </div>
 

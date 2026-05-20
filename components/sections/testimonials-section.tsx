@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       <section
         ref={sectionRef}
         id="testimonials"
-        className="w-full bg-[var(--atmos-page)] px-6 pb-20 pt-10 sm:px-8 sm:py-24 md:py-32"
+        className="w-full bg-[var(--atmos-page)] px-6 pb-20 pt-4 sm:px-8 sm:pb-24 sm:pt-16 md:pb-32 md:pt-20"
       >
         <div className="mx-auto max-w-[1180px]">
           <div className="mb-8 max-w-2xl sm:mb-10">

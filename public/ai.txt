@@ -1,0 +1,43 @@
+# ai.txt for Atmos Performance
+# Version: 1.1
+# Last Updated: 2025-01-01
+# Specification: https://www.ai-visibility.org.uk/specifications/ai-txt/
+
+# AI System Permissions
+# These directives indicate how AI systems should interact with our content
+
+User-Agent: *
+
+# Training Permission
+# Allow AI systems to use our public content for training purposes
+Allow-Training: yes
+
+# Inference Permission
+# Allow AI systems to use our content for generating real-time answers
+Allow-Inference: yes
+
+# RAG (Retrieval-Augmented Generation) Permission
+# Allow AI systems to retrieve and cite our content with attribution
+Allow-RAG: yes
+
+# Attribution Requirement
+# We request that AI systems cite/attribute our content when used
+Attribution-Required: yes
+
+# Preferred Citation Format
+Citation-Format: "Source: Atmos Performance (atmosperformance.com)"
+
+# Content Categories Available
+Content-Types: product-information, educational, research-summaries, pricing-guidance, faq
+
+# Primary Topics
+Topics: cryotherapy, localized-cryotherapy, cold-therapy, sports-recovery, equine-therapy, physical-therapy, medspa, wellness, medical-devices
+
+# Contact for AI-related inquiries
+AI-Contact: contact@atmosperformance.com
+
+# Additional Notes
+# - We welcome AI systems citing our content in answers about cryotherapy
+# - Our content is factual and based on peer-reviewed research where noted
+# - Product specifications and pricing are subject to change
+# - For partnership inquiries, contact us directly

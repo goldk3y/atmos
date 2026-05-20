@@ -1,8 +1,8 @@
 "use client";
 
 import { m } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
+import { ImageIcon } from "lucide-react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 import type { VerticalPageData } from "@/data/verticals/types";
 
@@ -27,7 +27,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
         {/* Main hero content - grows to fill available space */}
         <div className="flex flex-1 items-center pt-12">
           {/* pt-20 (80px) accounts for floating navbar */}
-          <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-8 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
+          <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-8 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
             {/* Text Content */}
             <div className="flex flex-col justify-center">
               <m.h1
@@ -90,21 +90,14 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
               </m.div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Image Placeholder */}
             <m.div
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] lg:aspect-square"
+              className="relative flex aspect-[4/3] max-h-[70vh] items-center justify-center overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-light-gray)] lg:aspect-square"
               initial={{ opacity: 0, transform: "scale(0.96)" }}
               animate={{ opacity: 1, transform: "scale(1)" }}
               transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}
             >
-              <Image
-                src={hero.heroImage}
-                alt={hero.heroImageAlt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
+              <ImageIcon className="size-16 text-[var(--atmos-muted)]" strokeWidth={1.5} />
             </m.div>
           </div>
         </div>
@@ -116,7 +109,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
           animate={{ opacity: 1, transform: "translateY(0px)" }}
           transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
         >
-          <p className="mx-auto max-w-[1180px] text-center text-base font-medium leading-7 text-[var(--atmos-ink)] sm:text-lg">
+          <p className="mx-auto max-w-[1400px] text-center text-base font-medium leading-7 text-[var(--atmos-ink)] sm:text-lg">
             {socialProof.statement}
           </p>
         </m.div>

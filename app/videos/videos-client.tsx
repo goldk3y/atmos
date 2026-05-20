@@ -95,6 +95,7 @@ const VIDEOS = [
 
 export function VideosClient() {
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
+  const [hasInteracted, setHasInteracted] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
   const filteredVideos =
@@ -150,7 +151,10 @@ export function VideosClient() {
               {CATEGORIES.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={() => {
+                    setHasInteracted(true);
+                    setActiveCategory(category.id);
+                  }}
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
                     activeCategory === category.id
@@ -174,31 +178,37 @@ export function VideosClient() {
               animate={{ opacity: 1, transform: "translateY(0px)" }}
               transition={{ duration: 0.55, delay: 0.4, ease: EASE_OUT }}
             >
-              {filteredVideos.map((video, index) => (
-                <m.div
-                  key={video.id}
-                  initial={
-                    shouldReduceMotion
-                      ? false
-                      : { opacity: 0, transform: "translateY(20px) scale(0.97)" }
-                  }
-                  animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.45 + index * 0.05,
-                    ease: EASE_OUT,
-                  }}
-                  layout
-                >
-                  <VideoPlayer
-                    thumbnailUrl={video.thumbnailUrl}
-                    videoUrl={video.videoUrl}
-                    title={video.title}
-                    description={video.description}
-                    className="h-full"
-                  />
-                </m.div>
-              ))}
+              {filteredVideos.map((video, index) => {
+                const noAnimation = hasInteracted || shouldReduceMotion;
+                return (
+                  <m.div
+                    key={video.id}
+                    initial={
+                      noAnimation
+                        ? false
+                        : { opacity: 0, transform: "translateY(20px) scale(0.97)" }
+                    }
+                    animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
+                    transition={
+                      noAnimation
+                        ? { duration: 0 }
+                        : {
+                            duration: 0.5,
+                            delay: 0.45 + index * 0.05,
+                            ease: EASE_OUT,
+                          }
+                    }
+                  >
+                    <VideoPlayer
+                      thumbnailUrl={video.thumbnailUrl}
+                      videoUrl={video.videoUrl}
+                      title={video.title}
+                      description={video.description}
+                      className="h-full"
+                    />
+                  </m.div>
+                );
+              })}
             </m.div>
 
             {/* Empty State */}

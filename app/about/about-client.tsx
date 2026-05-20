@@ -443,7 +443,7 @@ function CTASection() {
             animate={isInView ? { opacity: 1, transform: "translateY(0px)" } : undefined}
             transition={{ duration: 0.5, delay: 0.12, ease: EASE_OUT }}
           >
-            Talk with our team about how Atmos can help you add localized cryotherapy as a professional service. We'll answer your questions about equipment, training, implementation, and support.
+            Talk with our team about how Atmos can help you add localized cryotherapy as a professional service. We&apos;ll answer your questions about equipment, training, implementation, and support.
           </m.p>
 
           <m.div
