@@ -65,6 +65,7 @@ export const sportsRecoveryData: VerticalPageData = {
     name: "James Chen",
     title: "Head Athletic Trainer",
     facility: "Division I Athletic Department",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
   },
   visualProof: {
     thumbnailUrl: "/sports-recovery.jpg",

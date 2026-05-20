@@ -65,6 +65,7 @@ export const clinicsData: VerticalPageData = {
     name: "Dr. Sarah K.",
     title: "DC",
     facility: "Peak Performance Chiropractic, San Diego",
+    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face",
   },
   visualProof: {
     thumbnailUrl: "/chiro.jpg",

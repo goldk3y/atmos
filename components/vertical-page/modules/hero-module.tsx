@@ -25,7 +25,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
         }}
       >
         {/* Main hero content - grows to fill available space */}
-        <div className="flex flex-1 items-center pt-20">
+        <div className="flex flex-1 items-center pt-12">
           {/* pt-20 (80px) accounts for floating navbar */}
           <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-8 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
             {/* Text Content */}

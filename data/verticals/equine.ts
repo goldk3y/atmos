@@ -67,6 +67,7 @@ export const equineData: VerticalPageData = {
     name: "Dr. Michael Torres",
     title: "DVM",
     facility: "Westside Equine Veterinary, Temecula",
+    avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face",
   },
   visualProof: {
     thumbnailUrl: "/equine.jpg",
