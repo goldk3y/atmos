@@ -17,91 +17,100 @@ interface HeroModuleProps {
 export default function HeroModule({ hero, trustSignals, socialProof }: HeroModuleProps) {
   return (
     <LazyMotionProvider>
-      <section className="relative w-full overflow-hidden bg-[var(--atmos-page)]">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-6 px-6 py-8 sm:px-8 sm:py-10 md:py-12 lg:grid-cols-2 lg:gap-10 lg:py-14">
-          {/* Text Content */}
-          <div className="flex flex-col justify-center">
-            <m.h1
-              className="text-3xl font-semibold leading-[1.12] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.08] lg:text-5xl text-pretty"
-              initial={{ opacity: 0, transform: "translateY(16px)" }}
-              animate={{ opacity: 1, transform: "translateY(0px)" }}
-              transition={{ duration: 0.5, delay: 0.1, ease: EASE_OUT }}
-            >
-              {hero.stat}
-            </m.h1>
-
-            <m.p
-              className="mt-3 max-w-xl text-base leading-6 text-[var(--atmos-secondary)] sm:mt-4 sm:text-lg sm:leading-7 text-pretty"
-              initial={{ opacity: 0, transform: "translateY(12px)" }}
-              animate={{ opacity: 1, transform: "translateY(0px)" }}
-              transition={{ duration: 0.5, delay: 0.2, ease: EASE_OUT }}
-            >
-              {hero.subhead}
-            </m.p>
-
-            <m.div
-              className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-center"
-              initial={{ opacity: 0, transform: "translateY(12px) scale(0.97)" }}
-              animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
-              transition={{ duration: 0.45, delay: 0.3, ease: EASE_OUT }}
-            >
-              <Link
-                href="/book-demo"
-                className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5 sm:text-base"
+      {/* Full viewport height section with flexbox layout */}
+      <section
+        className="relative flex w-full flex-col bg-[var(--atmos-page)]"
+        style={{
+          minHeight: 'calc(100svh - 80px)', // svh is stable on load, account for navbar
+        }}
+      >
+        {/* Main hero content - grows to fill available space */}
+        <div className="flex flex-1 items-center">
+          <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-8 px-6 py-12 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-12">
+            {/* Text Content */}
+            <div className="flex flex-col justify-center">
+              <m.h1
+                className="text-3xl font-semibold leading-[1.12] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.08] lg:text-5xl text-pretty"
+                initial={{ opacity: 0, transform: "translateY(16px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
+                transition={{ duration: 0.5, delay: 0.1, ease: EASE_OUT }}
               >
-                {hero.ctaText}
-              </Link>
-            </m.div>
+                {hero.stat}
+              </m.h1>
 
-            {/* Trust Signals */}
+              <m.p
+                className="mt-4 max-w-xl text-lg leading-7 text-[var(--atmos-secondary)] sm:mt-5 sm:text-xl sm:leading-8 text-pretty"
+                initial={{ opacity: 0, transform: "translateY(12px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
+                transition={{ duration: 0.5, delay: 0.2, ease: EASE_OUT }}
+              >
+                {hero.subhead}
+              </m.p>
+
+              <m.div
+                className="mt-6 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:items-center"
+                initial={{ opacity: 0, transform: "translateY(12px) scale(0.97)" }}
+                animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
+                transition={{ duration: 0.45, delay: 0.3, ease: EASE_OUT }}
+              >
+                <Link
+                  href="/book-demo"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5 sm:text-base"
+                >
+                  {hero.ctaText}
+                </Link>
+              </m.div>
+
+              {/* Trust Signals */}
+              <m.div
+                className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--atmos-muted)] sm:mt-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.45, ease: EASE_OUT }}
+              >
+                {trustSignals.microcopy.slice(0, 3).map((signal, i) => (
+                  <span key={i} className="flex items-center gap-1.5">
+                    <svg
+                      className="size-4 text-[var(--atmos-green)]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {signal}
+                  </span>
+                ))}
+              </m.div>
+            </div>
+
+            {/* Hero Image */}
             <m.div
-              className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--atmos-muted)] sm:mt-5"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.45, ease: EASE_OUT }}
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] lg:aspect-square"
+              initial={{ opacity: 0, transform: "scale(0.96)" }}
+              animate={{ opacity: 1, transform: "scale(1)" }}
+              transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}
             >
-              {trustSignals.microcopy.slice(0, 3).map((signal, i) => (
-                <span key={i} className="flex items-center gap-1.5">
-                  <svg
-                    className="size-4 text-[var(--atmos-green)]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {signal}
-                </span>
-              ))}
+              <Image
+                src={hero.heroImage}
+                alt={hero.heroImageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </m.div>
           </div>
-
-          {/* Hero Image */}
-          <m.div
-            className="relative aspect-[16/10] overflow-hidden rounded-xl bg-[var(--atmos-light-gray)] sm:aspect-[4/3] lg:aspect-[4/3]"
-            initial={{ opacity: 0, transform: "scale(0.96)" }}
-            animate={{ opacity: 1, transform: "scale(1)" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}
-          >
-            <Image
-              src={hero.heroImage}
-              alt={hero.heroImageAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-          </m.div>
         </div>
 
-        {/* Social Proof Bar - Above the fold */}
+        {/* Social Proof Bar - Anchored at bottom of viewport */}
         <m.div
-          className="border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-4 sm:px-8 sm:py-5"
+          className="mt-auto border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-5 sm:px-8 sm:py-6"
           initial={{ opacity: 0, transform: "translateY(8px)" }}
           animate={{ opacity: 1, transform: "translateY(0px)" }}
           transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
