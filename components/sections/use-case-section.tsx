@@ -8,7 +8,7 @@ const useCases = [
     content:
       "Use Atmos around stalls, trailers, and training days when you need a localized cold-therapy workflow without moving the whole operation.",
     image: "/equine.jpg",
-    link: "#equine",
+    link: "/cryotherapy/equine",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const useCases = [
     content:
       "Give practitioners a focused modality that fits treatment rooms, patient education, and existing appointment flow.",
     image: "/chiro.jpg",
-    link: "#chiropractic",
+    link: "/cryotherapy/clinics",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const useCases = [
     content:
       "Support trainers, athletes, and staff with a simple localized workflow for high-use areas, practice days, and event recovery.",
     image: "/sports-recovery.jpg",
-    link: "#sports-recovery",
+    link: "/cryotherapy/sports-recovery",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const useCases = [
     content:
       "Offer a localized cold therapy experience that feels elevated while staying clear, responsible, and easy for guests to understand.",
     image: "/spa.jpg",
-    link: "#medspa",
+    link: "/cryotherapy/medspa",
   },
 ];
 
