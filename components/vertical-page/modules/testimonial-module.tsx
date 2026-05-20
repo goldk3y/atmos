@@ -10,12 +10,10 @@ const EASE_OUT: [number, number, number, number] = [0.23, 1, 0.32, 1];
 
 interface TestimonialModuleProps {
   testimonial: VerticalPageData["testimonial"];
-  trustSignals: VerticalPageData["trustSignals"];
 }
 
 export default function TestimonialModule({
   testimonial,
-  trustSignals,
 }: TestimonialModuleProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, {
@@ -82,17 +80,6 @@ export default function TestimonialModule({
               </div>
             </div>
 
-            {/* Trust signals near testimonial */}
-            <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-dashed border-[var(--atmos-border)] pt-6">
-              {trustSignals.badges.slice(0, 3).map((badge, i) => (
-                <span
-                  key={i}
-                  className="rounded-full bg-[var(--atmos-light-gray)] px-3 py-1 text-xs font-medium text-[var(--atmos-secondary)]"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
           </m.div>
         </div>
       </section>

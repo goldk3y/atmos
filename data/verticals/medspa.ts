@@ -16,7 +16,7 @@ export const medspaData: VerticalPageData = {
   },
   socialProof: {
     statement:
-      "Installed in 22 medspas and wellness studios from San Diego to LA.",
+      "Trusted by 22 medspas and wellness studios from San Diego to LA.",
   },
   problem: {
     statement:

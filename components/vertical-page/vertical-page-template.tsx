@@ -41,10 +41,7 @@ export default function VerticalPageTemplate({
       <UseCasesModule useCases={data.useCases} />
 
       {/* Module 5: Testimonial */}
-      <TestimonialModule
-        testimonial={data.testimonial}
-        trustSignals={data.trustSignals}
-      />
+      <TestimonialModule testimonial={data.testimonial} />
 
       {/* Module 6: Visual Proof */}
       <VisualProofModule visualProof={data.visualProof} />
