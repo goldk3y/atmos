@@ -47,7 +47,7 @@ export default function UseCaseSection() {
     >
       <div className="mx-auto max-w-[1180px]">
         <div className="max-w-3xl">
-          <h2 className="text-balance text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.05] md:text-5xl">
+          <h2 className="text-pretty text-3xl font-medium leading-[1.08] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.05] md:text-5xl">
             See how Atmos fits into your business.
           </h2>
           <p className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl">

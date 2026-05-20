@@ -3,6 +3,7 @@
 import { clsx } from "clsx";
 import { m, useInView, useReducedMotion } from "motion/react";
 import { ArrowRight, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 import { useRef, type ReactNode } from "react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
@@ -68,6 +69,7 @@ export default function OperatorSupportBentoSection() {
                 description:
                   "A portable localized cryotherapy system designed for professional service environments without a full-room buildout.",
                 link: "#equipment",
+                image: "/equipment.png",
               },
               {
                 eyebrow: "Training",
@@ -75,6 +77,7 @@ export default function OperatorSupportBentoSection() {
                 description:
                   "Operator training covers setup, handling, use-case framing, and responsible service delivery before your system moves forward.",
                 link: "#training",
+                image: "/training.png",
               },
               {
                 eyebrow: "Support",
@@ -82,6 +85,7 @@ export default function OperatorSupportBentoSection() {
                 description:
                   "From first conversation to launch, Atmos helps you answer the practical questions that come up before and after purchase.",
                 link: "#support",
+                image: "/support.png",
               },
             ].map((card, i) => (
               <BentoCard
@@ -90,6 +94,7 @@ export default function OperatorSupportBentoSection() {
                 title={card.title}
                 description={card.description}
                 link={card.link}
+                image={card.image}
                 isInView={isInView}
                 index={i}
                 shouldReduceMotion={!!shouldReduceMotion}
@@ -110,6 +115,7 @@ function BentoCard({
   description,
   fade = EMPTY_FADE,
   link,
+  image,
   isInView = true,
   index = 0,
   shouldReduceMotion = false,
@@ -121,6 +127,7 @@ function BentoCard({
   description: ReactNode;
   fade?: ("top" | "bottom")[];
   link?: string;
+  image?: string;
   isInView?: boolean;
   index?: number;
   shouldReduceMotion?: boolean;
@@ -152,7 +159,17 @@ function BentoCard({
     >
       <div className="relative h-56 shrink-0 p-[var(--card-padding)] sm:h-[18rem]">
         <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[var(--image-radius)] bg-[var(--atmos-light-gray)]">
-          <ImageIcon className="size-16 text-[var(--atmos-muted)]" />
+          {image ? (
+            <Image
+              src={image}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+          ) : (
+            <ImageIcon className="size-16 text-[var(--atmos-muted)]" />
+          )}
           <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(253,253,253,0.08),rgba(15,16,18,0.14))]" />
 
           {fade.includes("top") && (

@@ -4,15 +4,17 @@ import { m, useInView, useReducedMotion } from "motion/react";
 import { useMemo, useRef } from "react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
-const BELIEF_STATEMENT =
-  "Localized cryotherapy brings focused cold therapy into the moments where comfort, performance, and care matter most. Atmos exists to help you deliver that experience with exceptional equipment, thoughtful training, and support that carries beyond the sale.";
+const BELIEF_PARAGRAPHS = [
+  "Localized cryotherapy works. Decades of clinical use confirm what patients feel: less pain, faster recovery, restored range of motion.",
+  "What's kept it out of more practices is the equipment, not the evidence. Existing options were built for dedicated cryotherapy facilities. Atmos was built for the practice you already run.",
+];
 
 type BeliefStatementSectionProps = {
   className?: string;
 };
 
-type ScrollRevealParagraphProps = {
-  text: string;
+type ScrollRevealParagraphsProps = {
+  paragraphs: string[];
   className?: string;
 };
 
@@ -33,8 +35,8 @@ export default function BeliefStatementSection({
         className={`relative w-full overflow-hidden bg-[var(--atmos-canvas)] px-6 py-32 sm:px-8 sm:py-36 md:py-48 ${className}`}
       >
         <div className="relative mx-auto max-w-4xl">
-          <ScrollRevealParagraph
-            text={BELIEF_STATEMENT}
+          <ScrollRevealParagraphs
+            paragraphs={BELIEF_PARAGRAPHS}
             className="text-balance text-center text-xl font-medium leading-[1.65] text-[var(--atmos-ink)] sm:text-xl sm:leading-[1.7] lg:text-2xl"
           />
         </div>
@@ -43,49 +45,64 @@ export default function BeliefStatementSection({
   );
 }
 
-function ScrollRevealParagraph({
-  text,
+function ScrollRevealParagraphs({
+  paragraphs,
   className = "",
-}: ScrollRevealParagraphProps) {
-  const paragraphRef = useRef<HTMLParagraphElement>(null);
-  const isInView = useInView(paragraphRef, {
+}: ScrollRevealParagraphsProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
     once: true,
     amount: 0.35,
   });
   const shouldReduceMotion = useReducedMotion();
 
-  const words = useMemo(
-    () =>
-      Array.from(text.matchAll(/\S+/g), (match) => ({
-        key: `${match[0]}-${match.index ?? 0}`,
-        value: match[0],
-      })),
-    [text],
-  );
+  const allWords = useMemo(() => {
+    let globalIndex = 0;
+    return paragraphs.map((text) => {
+      const words = Array.from(text.matchAll(/\S+/g), (match) => {
+        const word = {
+          key: `${match[0]}-${match.index ?? 0}-${globalIndex}`,
+          value: match[0],
+          globalIndex,
+        };
+        globalIndex++;
+        return word;
+      });
+      return { text, words };
+    });
+  }, [paragraphs]);
 
   if (shouldReduceMotion) {
     return (
-      <p ref={paragraphRef} className={className}>
-        {text}
-      </p>
+      <div ref={containerRef} className="flex flex-col gap-6">
+        {paragraphs.map((text, index) => (
+          <p key={index} className={className}>
+            {text}
+          </p>
+        ))}
+      </div>
     );
   }
 
   return (
-    <p ref={paragraphRef} className={className}>
-      <span className="sr-only">{text}</span>
+    <div ref={containerRef} className="flex flex-col gap-6">
+      {allWords.map((paragraph, pIndex) => (
+        <p key={pIndex} className={className}>
+          <span className="sr-only">{paragraph.text}</span>
 
-      <span aria-hidden="true">
-        {words.map((word, index) => (
-          <RevealWord
-            key={word.key}
-            word={word.value}
-            index={index}
-            isInView={isInView}
-          />
-        ))}
-      </span>
-    </p>
+          <span aria-hidden="true">
+            {paragraph.words.map((word) => (
+              <RevealWord
+                key={word.key}
+                word={word.value}
+                index={word.globalIndex}
+                isInView={isInView}
+              />
+            ))}
+          </span>
+        </p>
+      ))}
+    </div>
   );
 }
 

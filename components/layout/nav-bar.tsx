@@ -10,6 +10,7 @@ import {
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
+import { MainNavigation } from "./main-navigation";
 
 export default function NavBar({
   alwaysVisible = false,
@@ -77,7 +78,7 @@ export default function NavBar({
         }
         aria-hidden={!effectiveIsVisible}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[1180px] items-center justify-between rounded-full bg-white/80 px-3 text-[var(--atmos-ink)] shadow-[0_18px_50px_rgba(15,16,18,0.14)] backdrop-blur-sm">
+        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full bg-white/80 px-3 text-[var(--atmos-ink)] shadow-[0_18px_50px_rgba(15,16,18,0.14)] backdrop-blur-sm">
           <Link
             href="/"
             className="group rounded-full pl-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)]"
@@ -91,22 +92,9 @@ export default function NavBar({
             />
           </Link>
 
-          {links.length > 0 && (
-            <nav
-              aria-label="Product navigation"
-              className="hidden items-center gap-7 text-sm font-medium text-[var(--atmos-secondary)] lg:flex"
-            >
-              {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="transition-colors hover:text-[var(--atmos-ink)]"
-                >
-                  {link.title}
-                </a>
-              ))}
-            </nav>
-          )}
+          <div className="hidden lg:block">
+            <MainNavigation />
+          </div>
 
           <Link
             href={ctaHref}

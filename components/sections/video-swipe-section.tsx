@@ -116,7 +116,7 @@ export default function VideoSwipeSection() {
               }
               transition={{ duration: 0.5, ease: EASE_OUT }}
             >
-              Watch Atmos in motion
+              Atmos in action
             </m.h2>
             <m.p
               className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"

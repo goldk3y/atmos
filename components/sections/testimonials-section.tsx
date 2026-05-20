@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
               Trusted by providers
             </m.h2>
             <m.p
-              className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl"
+              className="mt-4 text-base leading-7 text-[var(--atmos-secondary)] sm:text-lg sm:leading-8 md:text-xl text-pretty"
               {...animateProps(0.06)}
             >
               See how teams and businesses are using Atmos to deliver focused
