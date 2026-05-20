@@ -22,7 +22,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
           {/* Text Content */}
           <div className="flex flex-col justify-center">
             <m.h1
-              className="text-4xl font-semibold leading-[1.08] text-[var(--atmos-ink)] sm:text-5xl sm:leading-[1.05] lg:text-6xl text-pretty"
+              className="text-3xl font-semibold leading-[1.12] text-[var(--atmos-ink)] sm:text-4xl sm:leading-[1.08] lg:text-5xl text-pretty"
               initial={{ opacity: 0, transform: "translateY(16px)" }}
               animate={{ opacity: 1, transform: "translateY(0px)" }}
               transition={{ duration: 0.5, delay: 0.1, ease: EASE_OUT }}
