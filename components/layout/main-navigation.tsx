@@ -74,7 +74,7 @@ export function MainNavigation() {
                 <ul>
                   <ListItem href="/training" title="Training" />
                   <ListItem href="/support" title="Support" />
-                  <ListItem href="/the-science" title="The Science" />
+                  <ListItem href="/cryotherapy-science" title="The Science" />
                 </ul>
               </div>
               <div>
