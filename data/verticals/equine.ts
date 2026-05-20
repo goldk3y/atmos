@@ -69,6 +69,24 @@ export const equineData: VerticalPageData = {
     facility: "Westside Equine Veterinary, Temecula",
     avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face",
   },
+  revenuePotential: {
+    label: "Revenue Potential",
+    heading: "Generate revenue from in-house treatments.",
+    description:
+      "Eliminate referral fees and control recovery windows. Localized cryotherapy creates a new revenue stream while improving outcomes for your equine patients.",
+    ctaText: "Discuss your facility's potential",
+    metrics: [
+      { label: "Average treatment price", value: "$75-200" },
+      { label: "Treatments per day", value: "2-4 typical" },
+      { label: "Daily revenue potential", value: "$150-800" },
+      { label: "Monthly revenue potential", value: "$3,000-$16,000" },
+    ],
+    highlight: {
+      label: "Potential first-year revenue",
+      sublabel: "Based on 250 working days per year",
+      value: "$37,500 - $200,000",
+    },
+  },
   visualProof: {
     thumbnailUrl: "/equine.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",

@@ -5,8 +5,8 @@ import { useMemo, useRef } from "react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
 const BELIEF_PARAGRAPHS = [
-  "Cryotherapy works. Decades of clinical use confirm what patients feel: less pain, faster recovery, restored range of motion.",
-  "What's kept it out of more practices is not the evidence, it's the equipment. Existing options require dedicated cryotherapy facilities. Atmos was built for the practice you already run.",
+  "Fifty years of clinical evidence shows cryotherapy reduces pain, accelerates recovery, and restores range of motion.",
+  "What's kept it out of more practices is not the evidence, it's the equipment. Existing options require dedicated cryotherapy facilities, Atmos was built for the practice you already run.",
 ];
 
 type BeliefStatementSectionProps = {

@@ -75,7 +75,7 @@ export default function FinalCTASection() {
               href="/book-demo"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
             >
-              Schedule a Consultation
+              Book a Demo
             </a>
           </m.div>
         </div>

@@ -1,4 +1,4 @@
-export type { VerticalPageData } from "./types";
+export type { VerticalPageData, RevenuePotentialData } from "./types";
 export { clinicsData } from "./clinics";
 export { equineData } from "./equine";
 export { sportsRecoveryData } from "./sports-recovery";

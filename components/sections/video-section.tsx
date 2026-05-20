@@ -37,7 +37,7 @@ export default function VideoSection() {
           transition={{ duration: 0.65, ease: EASE_OUT }}
         >
           <VideoPlayer
-            thumbnailUrl="/ecmadao-T8gG3G-fWE0-unsplash.jpg"
+            thumbnailUrl="/video-placeholder.jpg"
             videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
             title="Experience Atmos"
             description="Setup, service flow, and support in context."

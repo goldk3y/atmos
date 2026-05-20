@@ -63,7 +63,7 @@ export function Footer() {
             />
             <p className="mt-6 max-w-xs text-sm leading-6 text-white/48 md:mt-8">
               © <time dateTime={`${COPYRIGHT_YEAR}`}>{COPYRIGHT_YEAR}</time>{" "}
-              Atmos. All rights reserved.
+              Atmos Performance. All rights reserved.
             </p>
           </AnimatedContainer>
 

@@ -20,22 +20,22 @@ const WALKTHROUGH_VIDEO_URL =
 
 const videos = [
   {
-    thumbnailUrl: "/ecmadao-T8gG3G-fWE0-unsplash.jpg",
+    thumbnailUrl: "/video-placeholder.jpg",
     title: "Service flow",
     description: "See the Atmos setup in a treatment environment.",
   },
   {
-    thumbnailUrl: "/sports-recovery.jpg",
+    thumbnailUrl: "/video-placeholder.jpg",
     title: "Athletic recovery",
     description: "Targeted cold therapy for performance teams.",
   },
   {
-    thumbnailUrl: "/chiro.jpg",
+    thumbnailUrl: "/video-placeholder.jpg",
     title: "Clinical care",
     description: "Focused support for patient-facing providers.",
   },
   {
-    thumbnailUrl: "/spa.jpg",
+    thumbnailUrl: "/video-placeholder.jpg",
     title: "Wellness services",
     description: "A premium cold therapy add-on for treatment menus.",
   },

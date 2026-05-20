@@ -67,6 +67,24 @@ export const sportsRecoveryData: VerticalPageData = {
     facility: "Division I Athletic Department",
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
   },
+  revenuePotential: {
+    label: "Revenue Potential",
+    heading: "Maximize your recovery floor investment.",
+    description:
+      "High-volume athlete programs and team contracts drive consistent revenue. Short session times mean you can treat more athletes per day than traditional modalities.",
+    ctaText: "Get a custom revenue projection",
+    metrics: [
+      { label: "Average treatment price", value: "$50-100" },
+      { label: "Treatments per day", value: "8-15 typical" },
+      { label: "Daily revenue potential", value: "$400-$1,500" },
+      { label: "Monthly revenue potential", value: "$8,000-$30,000" },
+    ],
+    highlight: {
+      label: "Potential first-year revenue",
+      sublabel: "Based on 250 working days per year",
+      value: "$100,000 - $375,000",
+    },
+  },
   visualProof: {
     thumbnailUrl: "/sports-recovery.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",

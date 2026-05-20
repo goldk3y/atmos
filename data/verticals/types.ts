@@ -1,3 +1,19 @@
+export interface RevenuePotentialData {
+  label: string;
+  heading: string;
+  description: string;
+  ctaText: string;
+  metrics: Array<{
+    label: string;
+    value: string;
+  }>;
+  highlight: {
+    label: string;
+    sublabel: string;
+    value: string;
+  };
+}
+
 export interface VerticalPageData {
   slug: string;
   metadata: {
@@ -35,6 +51,7 @@ export interface VerticalPageData {
     facility: string;
     avatar?: string;
   };
+  revenuePotential: RevenuePotentialData;
   visualProof: {
     thumbnailUrl: string;
     videoUrl: string;

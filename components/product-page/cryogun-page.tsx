@@ -298,7 +298,7 @@ function VideoSection() {
           transition={{ duration: 0.65, ease: EASE_OUT }}
         >
           <VideoPlayer
-            thumbnailUrl="/cryogun-smoke.png"
+            thumbnailUrl="/video-placeholder.jpg"
             videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
             title="CryoGun in Action"
             description="See setup, treatment application, and real-world use."

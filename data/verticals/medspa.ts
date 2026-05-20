@@ -66,6 +66,24 @@ export const medspaData: VerticalPageData = {
     facility: "Glow Wellness Studio, La Jolla",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
   },
+  revenuePotential: {
+    label: "Revenue Potential",
+    heading: "Turn trending services into premium revenue.",
+    description:
+      "Cryofacials and body treatments command premium pricing in the wellness market. Package deals and memberships create recurring revenue from your existing client base.",
+    ctaText: "Calculate your ROI",
+    metrics: [
+      { label: "Average treatment price", value: "$75-200" },
+      { label: "Treatments per day", value: "4-8 typical" },
+      { label: "Daily revenue potential", value: "$300-$1,600" },
+      { label: "Monthly revenue potential", value: "$6,000-$32,000" },
+    ],
+    highlight: {
+      label: "Potential first-year revenue",
+      sublabel: "Based on 250 working days per year",
+      value: "$75,000 - $400,000",
+    },
+  },
   visualProof: {
     thumbnailUrl: "/spa.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",

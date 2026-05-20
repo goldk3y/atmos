@@ -432,7 +432,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                   Timeline
                 </h2>
                 <p className="mt-2 text-sm text-[var(--atmos-secondary)]">
-                  Share where you are in the buying process.
+                  When are you looking to integrate Atmos into your business?
                 </p>
 
                 <div className="mt-6 space-y-3">

@@ -67,6 +67,24 @@ export const clinicsData: VerticalPageData = {
     facility: "Peak Performance Chiropractic, San Diego",
     avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face",
   },
+  revenuePotential: {
+    label: "Revenue Potential",
+    heading: "Turn patient demand into a new service line.",
+    description:
+      "Patients are already asking about cryotherapy. Capture that revenue with sessions that fit between appointments and command premium pricing.",
+    ctaText: "See the full revenue model",
+    metrics: [
+      { label: "Average treatment price", value: "$40-75" },
+      { label: "Treatments per day", value: "6-10 typical" },
+      { label: "Daily revenue potential", value: "$240-750" },
+      { label: "Monthly revenue potential", value: "$5,000-$15,000" },
+    ],
+    highlight: {
+      label: "Potential first-year revenue",
+      sublabel: "Based on 250 working days per year",
+      value: "$60,000 - $187,500",
+    },
+  },
   visualProof: {
     thumbnailUrl: "/chiro.jpg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",

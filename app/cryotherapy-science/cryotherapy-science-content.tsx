@@ -49,10 +49,10 @@ function HeroSection() {
           Research & Evidence
         </p>
         <h1 className="mt-4 text-[clamp(2.25rem,6vw,3.5rem)] font-semibold leading-[1.1] tracking-tight text-[var(--atmos-ink)]">
-          The Science Behind Cold Therapy
+          The Science Behind Localized Cryotherapy
         </h1>
         <p className="mt-6 text-xl leading-relaxed text-[var(--atmos-secondary)] sm:text-2xl sm:leading-relaxed">
-          What decades of peer-reviewed research tell us about cryotherapy, explained in plain English.
+          What decades of peer-reviewed research tell us about the power of cold therapy and what it can do for recovery, performance, and the human body.
         </p>
       </div>
     </section>
@@ -596,27 +596,51 @@ function FAQSection() {
   const faqItems = [
     {
       id: "faq-1",
-      question: "Is it safe?",
+      question: "Is localized cryotherapy safe for my clients?",
       answer:
-        "Yes. Localized cryotherapy has an excellent safety profile. You control the device, treat small areas at a time, and modern units include temperature sensors with automatic shutoffs. The most common effects are temporary redness and tingling that resolve within minutes. Standard precautions apply for conditions like Raynaud's disease, cold allergies, or pregnancy.",
+        "Yes. Localized cryotherapy has an excellent safety profile when used as directed. The operator maintains full control, treating small areas at a time. The CryoGun includes temperature monitoring and automatic shutoffs. The most common effects—temporary redness and tingling—resolve within minutes. Side effects are minimal compared to oral pain medications or more invasive procedures.",
     },
     {
       id: "faq-2",
-      question: "Does cryotherapy burn 500 calories per session?",
+      question: "Which clients should I screen out?",
       answer:
-        "No. This is a popular claim with no peer-reviewed support. While cold exposure does activate brown fat and can increase your metabolic rate, studies suggest only about a 15% increase in resting metabolism, not several hundred calories per session. We don't make this claim.",
+        "Standard contraindications include: Raynaud's disease, cold urticaria (cold allergy), pregnancy, uncontrolled hypertension (BP > 180/100), cardiac pacemakers, deep vein thrombosis, peripheral neuropathy with impaired sensation, and open wounds at the treatment site. We recommend a simple intake form to screen for these conditions before treatment.",
     },
     {
       id: "faq-3",
-      question: "How does a handheld device compare to a cryo chamber?",
+      question: "How long does a typical treatment take?",
       answer:
-        "Whole-body chambers have more clinical research, especially for systemic conditions. But localized devices are dramatically more accessible, lower-cost, and allow precise targeting of specific areas. For many use cases like targeted pain relief, sports recovery, and facial treatments, localized cryotherapy is more practical.",
+        "Localized treatments run 30 seconds to 4 minutes per area, depending on the treatment goal and body part. A focused session on a single joint or muscle group takes about 5 minutes including setup. Full-body spot treatments covering multiple areas typically take 15–20 minutes. This allows high client throughput compared to 20-minute ice pack protocols.",
     },
     {
       id: "faq-4",
-      question: "Can cryotherapy treat arthritis or fibromyalgia?",
+      question: "How quickly will clients notice results?",
       answer:
-        "Some studies show symptom improvement in conditions like rheumatoid arthritis. However, the FDA has explicitly warned against marketing cryotherapy as a treatment for medical conditions including arthritis, fibromyalgia, Alzheimer's, and MS. We position the CryoGun for recovery, pain relief, and aesthetics, not disease treatment.",
+        "Many clients feel immediate effects: reduced pain, increased energy, and improved mood from endorphin release. These acute benefits can last 6–8 hours. Anti-inflammatory effects typically persist 48–72 hours. For cumulative benefits—like managing chronic pain or improving skin appearance—research suggests clients see the most improvement after 10+ sessions over 2–3 weeks.",
+    },
+    {
+      id: "faq-5",
+      question: "How often should clients come back?",
+      answer:
+        "For acute injuries or post-surgical recovery: daily sessions for 3–5 consecutive days. For chronic conditions or ongoing maintenance: 2–3 sessions per week. For general wellness and athletic recovery: 1–2 sessions weekly. Many practices build cryotherapy into membership packages or bundle it with other services to encourage consistent use.",
+    },
+    {
+      id: "faq-6",
+      question: "How does a handheld device compare to a whole-body chamber?",
+      answer:
+        "Whole-body chambers have more research on systemic effects. But they require $40,000–$150,000 in equipment, dedicated floor space, and higher operating costs. Localized devices offer precise targeting of specific problem areas, lower upfront investment, portability between treatment rooms, and faster client turnover. For targeted pain relief, sports recovery, and facial treatments, localized cryotherapy is often more practical and profitable.",
+    },
+    {
+      id: "faq-7",
+      question: "Why would clients choose this over ice packs or cold plunge?",
+      answer:
+        "Speed and precision. Ice packs take 15–20 minutes to achieve therapeutic cooling; localized cryotherapy reaches target temperature in 30 seconds. Cold plunges treat the whole body when clients often only need relief in specific areas. The CryoGun also stays dry—no wet towels, no shivering clients, no cleanup. For your practice, it's a premium service that delivers faster results than DIY alternatives clients can do at home.",
+    },
+    {
+      id: "faq-8",
+      question: "Can I market cryotherapy as a treatment for medical conditions?",
+      answer:
+        "Be careful here. The FDA has explicitly warned against marketing cryotherapy as a treatment for conditions like arthritis, fibromyalgia, Alzheimer's, or MS. While research shows benefits for pain and inflammation, we recommend positioning for recovery, performance, pain management, and aesthetics rather than disease treatment. This protects your practice and builds long-term credibility with clients.",
     },
   ];
 
@@ -632,8 +656,11 @@ function FAQSection() {
         transition={{ duration: 0.6, ease: EASE_OUT }}
       >
         <h2 className="text-2xl font-semibold text-[var(--atmos-ink)] sm:text-3xl">
-          Common questions
+          Questions from practitioners
         </h2>
+        <p className="mt-4 text-lg leading-8 text-[var(--atmos-secondary)]">
+          What clinic owners, medspa operators, and sports recovery professionals ask before adding cryotherapy to their practice.
+        </p>
 
         <Accordion type="single" collapsible className="mt-8">
           {faqItems.map((item, index) => (

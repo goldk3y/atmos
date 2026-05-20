@@ -120,7 +120,7 @@ function VideoPlayer({
       <div
         ref={ref}
         className={cn(
-          "group relative cursor-pointer overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] ring-1 ring-[var(--atmos-border)]",
+          "@container group relative cursor-pointer overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] ring-1 ring-[var(--atmos-border)]",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]",
           className,
         )}
@@ -147,15 +147,15 @@ function VideoPlayer({
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--atmos-ink)]/75 via-[var(--atmos-ink)]/20 to-transparent" />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex size-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-white/30">
-            <Play className="size-8 fill-white text-white" />
+          <div className="flex size-10 @xs:size-12 @sm:size-14 @md:size-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-white/30">
+            <Play className="size-4 @xs:size-5 @sm:size-6 @md:size-8 fill-white text-white" />
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 p-6 sm:p-8">
-          <h3 className="text-2xl font-medium text-white">{title}</h3>
+        <div className="absolute bottom-0 left-0 p-4 @xs:p-5 @sm:p-6 @md:p-8">
+          <h3 className="text-lg @xs:text-xl @sm:text-2xl font-medium text-white">{title}</h3>
           {description && (
-            <p className="mt-1 text-sm text-white/80">{description}</p>
+            <p className="mt-1 text-xs @xs:text-sm text-white/80">{description}</p>
           )}
         </div>
       </div>

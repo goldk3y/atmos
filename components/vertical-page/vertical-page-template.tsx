@@ -7,6 +7,7 @@ import ProblemStatement from "./modules/problem-statement";
 import ThreePillarSolution from "./modules/three-pillar-solution";
 import UseCasesModule from "./modules/use-cases-module";
 import TestimonialModule from "./modules/testimonial-module";
+import RevenuePotentialModule from "./modules/revenue-potential-module";
 import VisualProofModule from "./modules/visual-proof-module";
 import FAQModule from "./modules/faq-module";
 import FinalCTAModule from "./modules/final-cta-module";
@@ -43,13 +44,16 @@ export default function VerticalPageTemplate({
       {/* Module 5: Testimonial */}
       <TestimonialModule testimonial={data.testimonial} />
 
-      {/* Module 6: Visual Proof */}
+      {/* Module 6: Revenue Potential */}
+      <RevenuePotentialModule revenuePotential={data.revenuePotential} />
+
+      {/* Module 7: Visual Proof */}
       <VisualProofModule visualProof={data.visualProof} />
 
-      {/* Module 7: FAQ */}
+      {/* Module 8: FAQ */}
       <FAQModule faq={data.faq} />
 
-      {/* Module 8: Final CTA */}
+      {/* Module 9: Final CTA */}
       <FinalCTAModule
         finalCta={data.finalCta}
         trustSignals={data.trustSignals}
