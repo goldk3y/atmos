@@ -18,7 +18,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
   return (
     <LazyMotionProvider>
       <section className="relative w-full overflow-hidden bg-[var(--atmos-page)]">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-8 px-6 py-16 sm:px-8 sm:py-20 md:py-24 lg:grid-cols-2 lg:gap-12 lg:py-28">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-6 px-6 py-8 sm:px-8 sm:py-10 md:py-12 lg:grid-cols-2 lg:gap-10 lg:py-14">
           {/* Text Content */}
           <div className="flex flex-col justify-center">
             <m.h1
@@ -31,7 +31,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
             </m.h1>
 
             <m.p
-              className="mt-5 max-w-xl text-lg leading-7 text-[var(--atmos-secondary)] sm:mt-6 sm:text-xl sm:leading-8 text-pretty"
+              className="mt-3 max-w-xl text-base leading-6 text-[var(--atmos-secondary)] sm:mt-4 sm:text-lg sm:leading-7 text-pretty"
               initial={{ opacity: 0, transform: "translateY(12px)" }}
               animate={{ opacity: 1, transform: "translateY(0px)" }}
               transition={{ duration: 0.5, delay: 0.2, ease: EASE_OUT }}
@@ -40,7 +40,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
             </m.p>
 
             <m.div
-              className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+              className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:items-center"
               initial={{ opacity: 0, transform: "translateY(12px) scale(0.97)" }}
               animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
               transition={{ duration: 0.45, delay: 0.3, ease: EASE_OUT }}
@@ -55,7 +55,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
 
             {/* Trust Signals */}
             <m.div
-              className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--atmos-muted)]"
+              className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--atmos-muted)] sm:mt-5"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.45, ease: EASE_OUT }}
@@ -83,7 +83,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
 
           {/* Hero Image */}
           <m.div
-            className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] lg:aspect-square"
+            className="relative aspect-[16/10] overflow-hidden rounded-xl bg-[var(--atmos-light-gray)] sm:aspect-[4/3] lg:aspect-[4/3]"
             initial={{ opacity: 0, transform: "scale(0.96)" }}
             animate={{ opacity: 1, transform: "scale(1)" }}
             transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}
@@ -101,7 +101,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
 
         {/* Social Proof Bar - Above the fold */}
         <m.div
-          className="border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-6 sm:px-8 sm:py-8"
+          className="border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-4 sm:px-8 sm:py-5"
           initial={{ opacity: 0, transform: "translateY(8px)" }}
           animate={{ opacity: 1, transform: "translateY(0px)" }}
           transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
