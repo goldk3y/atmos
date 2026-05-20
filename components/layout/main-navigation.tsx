@@ -16,25 +16,25 @@ import {
 const markets: { title: string; href: string; description: string }[] = [
   {
     title: "Equine",
-    href: "/markets/equine",
+    href: "/cryotherapy/equine",
     description:
       "Focused cold therapy wherever the horse is working. Barns, trailers, or training environments.",
   },
   {
     title: "Clinics & Chiropractic",
-    href: "/markets/clinics",
+    href: "/cryotherapy/clinics",
     description:
       "Add recovery to your treatment rooms without rebuilding the clinic.",
   },
   {
     title: "Sports Recovery",
-    href: "/markets/sports",
+    href: "/cryotherapy/sports-recovery",
     description:
       "Portable targeted recovery that travels with teams and athletes.",
   },
   {
     title: "Wellness & Medspa",
-    href: "/markets/wellness",
+    href: "/cryotherapy/medspa",
     description:
       "A premium treatment with grounded claims for your service menu.",
   },

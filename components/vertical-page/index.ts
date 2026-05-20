@@ -1,0 +1,11 @@
+export { default as VerticalPageTemplate } from "./vertical-page-template";
+export { default as HeroModule } from "./modules/hero-module";
+export { default as SocialProofBar } from "./modules/social-proof-bar";
+export { default as ProblemStatement } from "./modules/problem-statement";
+export { default as ThreePillarSolution } from "./modules/three-pillar-solution";
+export { default as UseCasesModule } from "./modules/use-cases-module";
+export { default as TestimonialModule } from "./modules/testimonial-module";
+export { default as VisualProofModule } from "./modules/visual-proof-module";
+export { default as FAQModule } from "./modules/faq-module";
+export { default as FinalCTAModule } from "./modules/final-cta-module";
+export { default as StickyBottomCTA } from "./sticky-bottom-cta";
