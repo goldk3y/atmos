@@ -11,9 +11,10 @@ const EASE_OUT: [number, number, number, number] = [0.23, 1, 0.32, 1];
 interface HeroModuleProps {
   hero: VerticalPageData["hero"];
   trustSignals: VerticalPageData["trustSignals"];
+  socialProof: VerticalPageData["socialProof"];
 }
 
-export default function HeroModule({ hero, trustSignals }: HeroModuleProps) {
+export default function HeroModule({ hero, trustSignals, socialProof }: HeroModuleProps) {
   return (
     <LazyMotionProvider>
       <section className="relative w-full overflow-hidden bg-[var(--atmos-page)]">
@@ -97,6 +98,18 @@ export default function HeroModule({ hero, trustSignals }: HeroModuleProps) {
             />
           </m.div>
         </div>
+
+        {/* Social Proof Bar - Above the fold */}
+        <m.div
+          className="border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-6 sm:px-8 sm:py-8"
+          initial={{ opacity: 0, transform: "translateY(8px)" }}
+          animate={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
+        >
+          <p className="mx-auto max-w-[1180px] text-center text-base font-medium leading-7 text-[var(--atmos-ink)] sm:text-lg">
+            {socialProof.statement}
+          </p>
+        </m.div>
       </section>
     </LazyMotionProvider>
   );
