@@ -10,7 +10,7 @@ import { SupportChat } from "@/components/support-chat";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atmosperformance.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atmos-red.vercel.app";
 const siteTitle = "Atmos Performance";
 const siteDescription =
   "Offer localized cryotherapy with confidence. Atmos provides professional cryotherapy equipment, training, and support for service environments.";
