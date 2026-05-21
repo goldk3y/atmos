@@ -134,7 +134,7 @@ export default function IncludedSpecsCard() {
         </button>
       </div>
 
-      <div className="mt-10 sm:mt-12">
+      <div className="mt-10 sm:mt-14">
         {activeTab === "included" ? <IncludedPanel /> : <SpecsPanel />}
       </div>
     </div>

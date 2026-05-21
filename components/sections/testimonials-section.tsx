@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       <section
         ref={sectionRef}
         id="testimonials"
-        className="w-full bg-[var(--atmos-canvas)] px-6 pb-20 pt-4 sm:px-8 sm:pb-24 sm:pt-16 md:pb-32 md:pt-20"
+        className="w-full bg-[var(--atmos-canvas)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto max-w-[1180px]">
           <div className="mb-8 max-w-2xl sm:mb-10">
@@ -59,15 +59,15 @@ export default function TestimonialsSection() {
               {...animateProps(0.1)}
               className="sm:col-span-2 lg:row-span-2"
             >
-              <Card className="grid h-full grid-rows-[auto_1fr] gap-8 border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none sm:p-6">
-                <CardHeader>
+              <Card className="h-full border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none sm:grid sm:grid-rows-[auto_1fr] sm:gap-8 sm:p-6">
+                <CardHeader className="hidden sm:block">
                   <div className="h-6 w-fit font-semibold text-[var(--atmos-ink)]">
                     Performance Physical Therapy
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-6 sm:pt-0">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-lg font-medium leading-7 text-[var(--atmos-ink)] sm:text-xl sm:leading-normal">
+                    <p className="leading-7 text-[var(--atmos-ink)] sm:text-lg sm:font-medium md:text-xl md:leading-normal">
                       Atmos has become essential to our recovery protocols. The
                       portability lets us treat patients anywhere in the clinic,
                       and the training gave our team confidence from day one.
@@ -99,11 +99,11 @@ export default function TestimonialsSection() {
               </Card>
             </m.div>
 
-            <m.div {...animateProps(0.17)} className="md:col-span-2">
-              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none md:col-span-2">
+            <m.div {...animateProps(0.17)} className="h-full md:col-span-2">
+              <Card className="h-full border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none md:col-span-2">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                    <p className="text-lg font-medium leading-7 text-[var(--atmos-ink)] sm:text-xl sm:leading-normal">
+                    <p className="leading-7 text-[var(--atmos-ink)] sm:text-lg sm:font-medium md:text-xl md:leading-normal">
                       We needed cryotherapy that could travel with our athletes.
                       Atmos delivers exactly that: professional-grade treatment
                       without the facility constraints. Our sports medicine team

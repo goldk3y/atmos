@@ -203,7 +203,7 @@ export default function VideoSwipeSection() {
                       <h3 className="text-xl font-medium leading-7 text-white sm:text-2xl">
                         {video.title}
                       </h3>
-                      <p className="mt-1 text-sm text-white/80">
+                      <p className="mt-2 text-sm text-white/80">
                         {video.description}
                       </p>
                     </div>

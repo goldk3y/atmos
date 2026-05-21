@@ -100,7 +100,7 @@ export default function FAQSection() {
           </div>
 
           <m.div
-            className="mx-auto mt-10 max-w-3xl sm:mt-12"
+            className="mx-auto mt-10 max-w-3xl sm:mt-14"
             initial={
               shouldReduceMotion
                 ? false

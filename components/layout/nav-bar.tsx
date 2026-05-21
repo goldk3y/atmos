@@ -79,7 +79,7 @@ export default function NavBar({
         }
         aria-hidden={!effectiveIsVisible}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full border-[0.5px] border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 px-3 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] dark:shadow-none dark:ring-1 dark:ring-[var(--atmos-border-subtle)] backdrop-blur-sm">
+        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full border-[0.5px] border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 pl-3 pr-2 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] dark:shadow-none dark:ring-1 dark:ring-[var(--atmos-border-subtle)] backdrop-blur-sm">
           <Link
             href="/"
             className="group rounded-full pl-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)]"

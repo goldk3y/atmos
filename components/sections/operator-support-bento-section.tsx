@@ -164,7 +164,7 @@ function BentoCard({
               src={image}
               alt=""
               fill
-              className="object-cover"
+              className="object-cover object-top sm:object-center"
               sizes="(max-width: 1024px) 100vw, 33vw"
             />
           ) : (

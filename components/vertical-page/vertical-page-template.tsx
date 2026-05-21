@@ -11,7 +11,6 @@ import RevenuePotentialModule from "./modules/revenue-potential-module";
 import VisualProofModule from "./modules/visual-proof-module";
 import FAQModule from "./modules/faq-module";
 import FinalCTAModule from "./modules/final-cta-module";
-import StickyBottomCTA from "./sticky-bottom-cta";
 import type { VerticalPageData } from "@/data/verticals/types";
 
 interface VerticalPageTemplateProps {
@@ -60,9 +59,6 @@ export default function VerticalPageTemplate({
       />
 
       <Footer />
-
-      {/* Sticky Bottom CTA (mobile) */}
-      <StickyBottomCTA ctaText={data.hero.ctaText} />
     </>
   );
 }

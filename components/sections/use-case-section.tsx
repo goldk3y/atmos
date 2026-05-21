@@ -56,7 +56,7 @@ export default function UseCaseSection() {
           </p>
         </div>
 
-        <div className="mt-10 sm:mt-12">
+        <div className="mt-10 sm:mt-14">
           <ExpandableCards cards={useCases} />
         </div>
       </div>

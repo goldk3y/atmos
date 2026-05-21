@@ -2,7 +2,7 @@
 
 import { m } from "motion/react";
 import Link from "next/link";
-import { ImageIcon } from "lucide-react";
+import { ImageIcon, Check } from "lucide-react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 import type { VerticalPageData } from "@/data/verticals/types";
 
@@ -19,13 +19,10 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
     <LazyMotionProvider>
       {/* Full viewport height section with flexbox layout */}
       <section
-        className="relative flex w-full flex-col bg-[var(--atmos-page)]"
-        style={{
-          height: '100svh', // Exactly fills viewport, no extra space
-        }}
+        className="relative flex min-h-svh w-full flex-col bg-[var(--atmos-page)]"
       >
         {/* Main hero content - grows to fill available space */}
-        <div className="flex flex-1 items-center pt-12">
+        <div className="flex flex-1 items-center pt-20 sm:pt-12">
           {/* pt-20 (80px) accounts for floating navbar */}
           <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 gap-8 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-12">
             {/* Text Content */}
@@ -56,7 +53,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
               >
                 <Link
                   href="/book-demo"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5 sm:text-base"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-base font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5"
                 >
                   {hero.ctaText}
                 </Link>
@@ -103,16 +100,19 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
         </div>
 
         {/* Social Proof Bar - Anchored at bottom of viewport */}
-        <m.div
-          className="mt-auto border-t border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-6 py-5 sm:px-8 sm:py-6"
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
-          animate={{ opacity: 1, transform: "translateY(0px)" }}
-          transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
-        >
-          <p className="mx-auto max-w-[1400px] text-center text-base font-medium leading-7 text-[var(--atmos-ink)] sm:text-lg">
-            {socialProof.statement}
-          </p>
-        </m.div>
+        <div className="mt-auto flex w-full justify-center px-6 pb-6 sm:px-8 sm:pb-8">
+          <m.div
+            className="w-fit max-w-[1400px] rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-6 py-5 sm:px-8 sm:py-6"
+            initial={{ opacity: 0, transform: "translateY(8px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: EASE_OUT }}
+          >
+            <p className="flex items-center justify-center gap-2 text-center text-base font-medium leading-7 text-[var(--atmos-ink)] sm:text-lg">
+              <Check className="size-5 shrink-0 text-[var(--atmos-green)]" />
+              {socialProof.statement}
+            </p>
+          </m.div>
+        </div>
       </section>
     </LazyMotionProvider>
   );

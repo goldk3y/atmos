@@ -33,7 +33,7 @@ export default function FinalCTAModule({
       >
         <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
           <m.h2
-            className="max-w-3xl text-3xl font-medium leading-[1.08] sm:text-4xl sm:leading-[1.05] md:text-6xl"
+            className="max-w-3xl text-3xl font-medium leading-[1.08] sm:text-4xl sm:leading-[1.05] md:text-5xl"
             initial={
               shouldReduceMotion
                 ? false
