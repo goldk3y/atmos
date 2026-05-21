@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atmosperformance.co
 const siteTitle = "Atmos Performance";
 const siteDescription =
   "Offer localized cryotherapy with confidence. Atmos provides professional cryotherapy equipment, training, and support for service environments.";
-const ogImage = "/ecmadao-T8gG3G-fWE0-unsplash.jpg";
+const ogImage = "/og-image.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage,
-        width: 5472,
-        height: 3080,
-        alt: "Atmos localized cryotherapy service environment",
+        width: 1200,
+        height: 630,
+        alt: "Atmos Performance - Precision Cryotherapy, Anywhere",
       },
     ],
     locale: "en_US",
