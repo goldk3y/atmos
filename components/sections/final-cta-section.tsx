@@ -19,7 +19,7 @@ export default function FinalCTASection() {
       <section
         ref={sectionRef}
         id="demo"
-        className="w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
+        className="w-full bg-[var(--atmos-elevated-bg)] px-6 py-20 text-[var(--atmos-elevated-fg)] sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
           <m.h2
@@ -39,7 +39,7 @@ export default function FinalCTASection() {
             Bring localized cryotherapy into your service mix.
           </m.h2>
           <m.p
-            className="mt-4 max-w-2xl text-base leading-7 text-white/68 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
+            className="mt-4 max-w-2xl text-base leading-7 text-[var(--atmos-elevated-muted)] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
             initial={
               shouldReduceMotion
                 ? false
@@ -73,7 +73,7 @@ export default function FinalCTASection() {
           >
             <a
               href="/book-demo"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97]"
             >
               Book a Demo
             </a>

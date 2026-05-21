@@ -178,7 +178,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                 key={stepNumber}
                 className={`flex-1 rounded-full py-1 text-center text-xs font-medium ${
                   step >= stepNumber
-                    ? "bg-[var(--atmos-ink)] text-white"
+                    ? "bg-[var(--atmos-ink)] text-[var(--atmos-page)]"
                     : "bg-[var(--atmos-border)] text-[var(--atmos-secondary)]"
                 }`}
               />
@@ -243,10 +243,10 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                         type="text"
                         value={formData.firstName}
                         onChange={(e) => updateField("firstName", e.target.value)}
-                        className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                        className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                         placeholder="First"
                       />
-                      {errors.firstName && <p className="mt-1.5 text-sm text-red-600">{errors.firstName}</p>}
+                      {errors.firstName && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.firstName}</p>}
                     </div>
 
                     <div>
@@ -258,10 +258,10 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                         type="text"
                         value={formData.lastName}
                         onChange={(e) => updateField("lastName", e.target.value)}
-                        className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                        className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                         placeholder="Last"
                       />
-                      {errors.lastName && <p className="mt-1.5 text-sm text-red-600">{errors.lastName}</p>}
+                      {errors.lastName && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.lastName}</p>}
                     </div>
                   </div>
 
@@ -274,10 +274,10 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                       type="email"
                       value={formData.email}
                       onChange={(e) => updateField("email", e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                       placeholder="you@company.com"
                     />
-                    {errors.email && <p className="mt-1.5 text-sm text-red-600">{errors.email}</p>}
+                    {errors.email && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.email}</p>}
                   </div>
 
                   <div>
@@ -289,16 +289,16 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => updateField("phone", e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                       placeholder="+1 (555) 000-0000"
                     />
-                    {errors.phone && <p className="mt-1.5 text-sm text-red-600">{errors.phone}</p>}
+                    {errors.phone && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.phone}</p>}
                   </div>
                 </div>
 
                 <button
                   onClick={handleContinue}
-                  className="mt-8 w-full rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.98]"
+                  className="mt-8 w-full rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.98]"
                 >
                   Continue
                 </button>
@@ -328,10 +328,10 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                       type="text"
                       value={formData.company}
                       onChange={(e) => updateField("company", e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                       placeholder="Your organization"
                     />
-                    {errors.company && <p className="mt-1.5 text-sm text-red-600">{errors.company}</p>}
+                    {errors.company && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.company}</p>}
                   </div>
 
                   <div>
@@ -343,7 +343,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                       type="text"
                       value={formData.role}
                       onChange={(e) => updateField("role", e.target.value)}
-                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                      className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                       placeholder="Owner, director, trainer..."
                     />
                   </div>
@@ -358,7 +358,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                   </button>
                   <button
                     onClick={handleContinue}
-                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.98]"
+                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.98]"
                   >
                     Continue
                   </button>
@@ -389,8 +389,8 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                         onClick={() => toggleUseCase(option.value)}
                         className={`w-full rounded-lg border p-4 text-left transition-all ${
                           isSelected
-                            ? "border-[var(--atmos-blue)] bg-[#f3f8ff]"
-                            : "border-[var(--atmos-border)] bg-white hover:border-[var(--atmos-blue)]"
+                            ? "border-[var(--atmos-blue)] bg-[var(--atmos-blue)]/5"
+                            : "border-[var(--atmos-border)] bg-[var(--atmos-surface)] hover:border-[var(--atmos-blue)]"
                         }`}
                       >
                         <span className="block text-sm font-medium text-[var(--atmos-ink)]">
@@ -403,7 +403,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                     );
                   })}
                 </div>
-                {errors.useCases && <p className="mt-1.5 text-sm text-red-600">{errors.useCases}</p>}
+                {errors.useCases && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.useCases}</p>}
 
                 <div className="mt-8 flex gap-3">
                   <button
@@ -414,7 +414,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                   </button>
                   <button
                     onClick={handleContinue}
-                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.98]"
+                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.98]"
                   >
                     Continue
                   </button>
@@ -445,15 +445,15 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                         onClick={() => updateField("timeline", timeline)}
                         className={`w-full rounded-lg border px-4 py-3 text-left text-sm font-medium transition-all ${
                           isSelected
-                            ? "border-[var(--atmos-blue)] bg-[#f3f8ff] text-[var(--atmos-blue)]"
-                            : "border-[var(--atmos-border)] bg-white text-[var(--atmos-ink)] hover:border-[var(--atmos-blue)]"
+                            ? "border-[var(--atmos-blue)] bg-[var(--atmos-blue)]/5 text-[var(--atmos-blue)]"
+                            : "border-[var(--atmos-border)] bg-[var(--atmos-surface)] text-[var(--atmos-ink)] hover:border-[var(--atmos-blue)]"
                         }`}
                       >
                         {timeline}
                       </button>
                     );
                   })}
-                  {errors.timeline && <p className="mt-1.5 text-sm text-red-600">{errors.timeline}</p>}
+                  {errors.timeline && <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.timeline}</p>}
                 </div>
 
                 <div className="mt-6">
@@ -466,7 +466,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                     onChange={(e) => updateField("notes", e.target.value)}
                     placeholder="Questions, goals, current setup, or team size."
                     rows={4}
-                    className="mt-1.5 w-full resize-none rounded-lg border border-[var(--atmos-border)] bg-white px-4 py-3 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                    className="mt-1.5 w-full resize-none rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 py-3 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                   />
                 </div>
 
@@ -479,7 +479,7 @@ export function DemoBookingFlow({ onEventScheduled }: { onEventScheduled?: (sche
                   </button>
                   <button
                     onClick={handleContinue}
-                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.98]"
+                    className="flex-1 rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.98]"
                   >
                     Continue
                   </button>

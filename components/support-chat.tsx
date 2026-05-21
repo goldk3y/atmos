@@ -181,7 +181,7 @@ export function SupportChat() {
                         className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                           message.sender === "user"
                             ? "bg-[var(--atmos-blue)] text-white"
-                            : "bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)]"
+                            : "bg-[var(--atmos-fill)] text-[var(--atmos-ink)]"
                         }`}
                       >
                         {message.content}
@@ -202,7 +202,7 @@ export function SupportChat() {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyPress}
                     placeholder="Type a message..."
-                    className="flex-1 rounded-full border border-[var(--atmos-border)] bg-[var(--atmos-light-gray)] px-4 py-2.5 text-sm text-[var(--atmos-ink)] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--atmos-blue)]/20"
+                    className="flex-1 rounded-full border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 py-2.5 text-sm text-[var(--atmos-ink)] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--atmos-blue)]/20"
                     aria-label="Type your message"
                   />
                   <m.button

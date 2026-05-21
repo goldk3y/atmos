@@ -7,6 +7,7 @@ import {
   combineSchemas,
 } from "@/lib/structured-data";
 import { SupportChat } from "@/components/support-chat";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atmosperformance.com";
@@ -72,13 +73,21 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <head>
         <JsonLd data={structuredData} />
       </head>
       <body className="min-h-full flex flex-col">
-        {children}
-        <SupportChat />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <SupportChat />
+        </ThemeProvider>
       </body>
     </html>
   );

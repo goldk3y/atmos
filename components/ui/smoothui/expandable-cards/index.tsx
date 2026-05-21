@@ -100,7 +100,7 @@ export default function ExpandableCards({
                     : "clamp(14.75rem, 72vw, 17.625rem)",
               }}
               aria-label={`${card.title} card${selectedCard === card.id ? ", expanded" : ""}`}
-              className={`group relative h-[clamp(17rem,72vw,24rem)] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 ${cardClassName}`}
+              className={`group relative h-[clamp(17rem,72vw,24rem)] shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-surface)] focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 ${cardClassName}`}
               data-card-id={card.id}
               data-selected={selectedCard === card.id ? "true" : undefined}
               key={card.id}
@@ -163,7 +163,7 @@ export default function ExpandableCards({
                             filter: "blur(0px)",
                           }
                     }
-                    className="absolute right-0 top-0 h-full bg-[var(--atmos-canvas)]"
+                    className="absolute right-0 top-0 h-full bg-[var(--atmos-surface)]"
                     exit={
                       shouldReduceMotion
                         ? { width: 0, opacity: 0 }

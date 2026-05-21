@@ -134,11 +134,11 @@ function PillarCard({
       className={clsx(
         "group relative flex transform-gpu flex-col overflow-hidden rounded-[1.25rem]",
         "bg-[var(--atmos-canvas)] ring-1 ring-[var(--atmos-border)]",
-        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[#cfcfd5]"
+        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[var(--atmos-secondary)]"
       )}
     >
       <div className="relative h-56 shrink-0 p-2 sm:h-[18rem]">
-        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[1rem] bg-[var(--atmos-light-gray)]">
+        <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[1rem] bg-[var(--atmos-fill)]">
           <ImageIcon className="size-12 text-[var(--atmos-muted)]" />
         </div>
       </div>

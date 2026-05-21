@@ -391,7 +391,7 @@ function StatsSection() {
       >
         <div className="mx-auto max-w-[1180px]">
           <m.div
-            className="rounded-[1.25rem] bg-[#0f1012] px-6 py-12 sm:px-12 sm:py-16 md:py-20"
+            className="rounded-[1.25rem] bg-[var(--atmos-elevated-bg)] px-6 py-12 sm:px-12 sm:py-16 md:py-20"
             initial={shouldReduceMotion ? false : { opacity: 0, transform: "translateY(24px)" }}
             animate={isInView ? { opacity: 1, transform: "translateY(0px)" } : undefined}
             transition={{ duration: 0.55, ease: EASE_OUT }}
@@ -426,7 +426,7 @@ function CTASection() {
     <LazyMotionProvider>
       <section
         ref={sectionRef}
-        className="w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
+        className="w-full bg-[var(--atmos-elevated-bg)] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
           <m.h2
@@ -460,7 +460,7 @@ function CTASection() {
           >
             <a
               href="/book-demo"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97]"
             >
               Book a Demo
             </a>

@@ -85,7 +85,7 @@ export default function UseCasesModule({ useCases }: UseCasesModuleProps) {
             transition={{ duration: 0.5, delay: 0.15, ease: EASE_OUT }}
           >
             {/* Image on the left */}
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-light-gray)] lg:aspect-square">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-fill)] lg:aspect-square">
               <AnimatePresence initial={false}>
                 <m.div
                   key={selectedIndex}

@@ -120,7 +120,7 @@ function VideoPlayer({
       <div
         ref={ref}
         className={cn(
-          "@container group relative cursor-pointer overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] ring-1 ring-[var(--atmos-border)]",
+          "@container group relative cursor-pointer overflow-hidden rounded-2xl bg-[var(--atmos-fill)] ring-1 ring-[var(--atmos-border)]",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]",
           className,
         )}

@@ -154,11 +154,11 @@ function BentoCard({
         className,
         "group relative flex transform-gpu flex-col overflow-hidden rounded-[var(--card-radius)] [--card-padding:0.5rem] [--card-radius:1.25rem] [--image-radius:calc(var(--card-radius)-var(--card-padding))]",
         "bg-[var(--atmos-canvas)] ring-1 ring-[var(--atmos-border)]",
-        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[#cfcfd5]",
+        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[var(--atmos-secondary)]",
       )}
     >
       <div className="relative h-56 shrink-0 p-[var(--card-padding)] sm:h-[18rem]">
-        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[var(--image-radius)] bg-[var(--atmos-light-gray)]">
+        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[var(--image-radius)] bg-[var(--atmos-fill)]">
           {image ? (
             <Image
               src={image}

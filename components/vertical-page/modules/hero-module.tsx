@@ -56,7 +56,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
               >
                 <Link
                   href="/book-demo"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5 sm:text-base"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-6 py-3 text-center text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97] sm:min-h-0 sm:px-8 sm:py-3.5 sm:text-base"
                 >
                   {hero.ctaText}
                 </Link>
@@ -92,7 +92,7 @@ export default function HeroModule({ hero, trustSignals, socialProof }: HeroModu
 
             {/* Hero Image Placeholder */}
             <m.div
-              className="relative flex aspect-[4/3] max-h-[70vh] items-center justify-center overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-light-gray)] lg:aspect-square"
+              className="relative flex aspect-[4/3] max-h-[70vh] items-center justify-center overflow-hidden rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-fill)] lg:aspect-square"
               initial={{ opacity: 0, transform: "scale(0.96)" }}
               animate={{ opacity: 1, transform: "scale(1)" }}
               transition={{ duration: 0.6, delay: 0.2, ease: EASE_OUT }}

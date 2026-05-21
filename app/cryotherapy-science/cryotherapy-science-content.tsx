@@ -21,7 +21,7 @@ const EASE_OUT: [number, number, number, number] = [0.23, 1, 0.32, 1];
 export default function CryotherapyScienceContent() {
   return (
     <LazyMotionProvider>
-      <main className="bg-white text-[var(--atmos-ink)]">
+      <main className="bg-[var(--atmos-surface)] text-[var(--atmos-ink)]">
         <HeroSection />
         <IntroductionSection />
         <WhatIsCryotherapySection />
@@ -71,7 +71,7 @@ function IntroductionSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -102,7 +102,7 @@ function WhatIsCryotherapySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -162,7 +162,7 @@ function TypesOfColdTherapySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <div className="mx-auto max-w-[720px]">
         <m.div
@@ -248,7 +248,7 @@ function HowItWorksSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -265,19 +265,19 @@ function HowItWorksSection() {
 
         <ol className="mt-8 space-y-6 text-lg leading-8 text-[var(--atmos-secondary)]">
           <li className="flex gap-4">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-white">1</span>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-[var(--atmos-page)]">1</span>
             <div>
               <strong className="text-[var(--atmos-ink)]">Rapid cooling:</strong> Your skin temperature drops from roughly 32°C to about 4°C in around 30 seconds. This speed is key: the <em>rate</em> of temperature change triggers stronger physiological responses than slow cooling.
             </div>
           </li>
           <li className="flex gap-4">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-white">2</span>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-[var(--atmos-page)]">2</span>
             <div>
               <strong className="text-[var(--atmos-ink)]">Mechanical stimulation:</strong> The pressurized stream creates a gentle massage effect, driving cold deeper into tissue than passive ice and stimulating nerve receptors.
             </div>
           </li>
           <li className="flex gap-4">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-white">3</span>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--atmos-ink)] text-sm font-medium text-[var(--atmos-page)]">3</span>
             <div>
               <strong className="text-[var(--atmos-ink)]">Thermal shock:</strong> The sudden cold activates your body&apos;s response systems, triggering changes in blood flow, nerve signaling, and chemical release that we&apos;ll explain next.
             </div>
@@ -310,7 +310,7 @@ function WhatHappensInYourBodySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -393,7 +393,7 @@ function EvidenceSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -532,7 +532,7 @@ function AthletesBanner() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-28 lg:px-12"
+      className="relative w-full bg-[var(--atmos-elevated-bg)] px-6 py-20 text-[var(--atmos-elevated-fg)] sm:px-8 sm:py-28 lg:px-12"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -542,7 +542,7 @@ function AthletesBanner() {
           fill
           className="object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1012] via-[#0f1012]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--atmos-elevated-bg)] via-[var(--atmos-elevated-bg)]/80 to-transparent" />
       </div>
 
       <m.div
@@ -551,7 +551,7 @@ function AthletesBanner() {
         animate={isInView ? { opacity: 1, y: 0 } : undefined}
         transition={{ duration: 0.6, ease: EASE_OUT }}
       >
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/50">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--atmos-elevated-secondary)]">
           Professional Use
         </p>
         <h2 className="mt-4 max-w-[600px] text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
@@ -561,22 +561,22 @@ function AthletesBanner() {
         {/* Stats Row */}
         <div className="mt-10 flex flex-wrap gap-x-12 gap-y-4 text-lg">
           <span>15+ NFL teams</span>
-          <span className="text-white/40">•</span>
+          <span className="text-[var(--atmos-elevated-tertiary)]">•</span>
           <span>UFC Performance Institute</span>
-          <span className="text-white/40">•</span>
+          <span className="text-[var(--atmos-elevated-tertiary)]">•</span>
           <span>Olympic training centers</span>
         </div>
 
         {/* Specific Examples */}
-        <div className="mt-10 max-w-[720px] space-y-4 text-base leading-7 text-white/70">
+        <div className="mt-10 max-w-[720px] space-y-4 text-base leading-7 text-[var(--atmos-elevated-muted)]">
           <p>
-            <strong className="text-white">Cristiano Ronaldo</strong> spent €45,000 to install a cryotherapy chamber in his Madrid home. When he moved to Manchester, the chamber came with him.
+            <strong className="text-[var(--atmos-elevated-fg)]">Cristiano Ronaldo</strong> spent €45,000 to install a cryotherapy chamber in his Madrid home. When he moved to Manchester, the chamber came with him.
           </p>
           <p>
-            The <strong className="text-white">2011 Dallas Mavericks</strong> used cryotherapy throughout their championship playoff run, a recovery edge that helped them outlast younger, deeper teams.
+            The <strong className="text-[var(--atmos-elevated-fg)]">2011 Dallas Mavericks</strong> used cryotherapy throughout their championship playoff run, a recovery edge that helped them outlast younger, deeper teams.
           </p>
           <p>
-            <strong className="text-white">Leicester City FC</strong> incorporated cryotherapy during their improbable 2015–16 Premier League title season, helping players recover faster between matches.
+            <strong className="text-[var(--atmos-elevated-fg)]">Leicester City FC</strong> incorporated cryotherapy during their improbable 2015–16 Premier League title season, helping players recover faster between matches.
           </p>
         </div>
       </m.div>
@@ -647,7 +647,7 @@ function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px]"
@@ -695,7 +695,7 @@ function ClosingSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
+      className="w-full bg-[var(--atmos-surface)] px-6 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
       <m.div
         className="mx-auto max-w-[720px] text-center"
@@ -710,7 +710,7 @@ function ClosingSection() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/book-demo"
-            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-ink)] px-8 text-base font-medium text-white transition-colors duration-200 hover:bg-[var(--atmos-blue)]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-ink)] px-8 text-base font-medium text-[var(--atmos-page)] transition-colors duration-200 hover:bg-[var(--atmos-blue)] hover:text-white"
           >
             Book a Demo
           </Link>

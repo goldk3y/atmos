@@ -60,7 +60,7 @@ export default function FAQSection() {
       <section
         ref={sectionRef}
         id="faq"
-        className="w-full bg-[var(--atmos-page)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
+        className="w-full bg-[var(--atmos-canvas)] px-6 py-20 sm:px-8 sm:py-24 md:py-32"
       >
         <div className="mx-auto max-w-[1180px]">
           <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
@@ -116,7 +116,7 @@ export default function FAQSection() {
             <Accordion
               type="single"
               collapsible
-              className="w-full rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] px-5 py-2 shadow-none sm:px-8 sm:py-3"
+              className="w-full rounded-2xl border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-5 py-2 shadow-none sm:px-8 sm:py-3"
             >
               {faqItems.map((item, index) => (
                 <AccordionItem
@@ -143,7 +143,7 @@ export default function FAQSection() {
             <p className="mt-6 px-2 text-center text-sm leading-6 text-[var(--atmos-secondary)] sm:px-8 sm:text-base">
               Can&apos;t find what you&apos;re looking for? Contact our{" "}
               <Link
-                href="/book-demo"
+                href="/contact"
                 className="font-medium text-[var(--atmos-blue)] hover:underline"
               >
                 support team

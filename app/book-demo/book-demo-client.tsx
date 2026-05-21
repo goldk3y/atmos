@@ -25,6 +25,7 @@ export function BookDemoClient() {
             width={40}
             height={40}
             loading="eager"
+            className="dark:invert"
           />
           <h1 className="text-sm font-normal sm:text-base">
             <span className="font-medium text-[var(--atmos-ink)]">Atmos</span>

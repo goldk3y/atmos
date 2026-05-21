@@ -67,17 +67,51 @@
 }
 
 :root {
-  --atmos-ink: #0f1012;
+  /* === CORE COLORS (Light Mode - Apple HIG Aligned) === */
+  --atmos-ink: #000000;
   --atmos-graphite: #020201;
   --atmos-light-gray: #f5f5f7;
   --atmos-page: var(--atmos-light-gray);
   --atmos-canvas: #fdfdfd;
-  --atmos-muted: #868788;
-  --atmos-secondary: #6f7377;
+  --atmos-surface: #ffffff;
+  --atmos-secondary: rgba(60, 60, 67, 0.6);
+  --atmos-muted: rgba(60, 60, 67, 0.3);
+  --atmos-quaternary: rgba(60, 60, 67, 0.18);
   --atmos-border: #dedee2;
-  --atmos-blue: #0071e3;
-  --atmos-green: #34c759;
+  --atmos-border-subtle: rgba(60, 60, 67, 0.12);
+  --atmos-ink-ghost: rgba(0, 0, 0, 0.2);
 
+  /* === SEMANTIC ACCENTS (Apple HIG) === */
+  --atmos-red: #ff383c;
+  --atmos-orange: #ff8d28;
+  --atmos-yellow: #ffcc00;
+  --atmos-green: #34c759;
+  --atmos-blue: #0088ff;
+  --atmos-blue-hover: #006acc;
+
+  /* === FILLS (subtle backgrounds) === */
+  --atmos-fill: rgba(120, 120, 128, 0.2);
+  --atmos-fill-secondary: rgba(120, 120, 128, 0.16);
+  --atmos-fill-tertiary: rgba(118, 118, 128, 0.12);
+
+  /* === ELEVATED SECTIONS (footer/CTA - dark in light mode) === */
+  --atmos-elevated-bg: #0f1012;
+  --atmos-elevated-fg: #ffffff;
+  --atmos-elevated-muted: rgba(255, 255, 255, 0.68);
+  --atmos-elevated-secondary: rgba(255, 255, 255, 0.50);
+  --atmos-elevated-tertiary: rgba(255, 255, 255, 0.42);
+  --atmos-elevated-border: rgba(255, 255, 255, 0.10);
+  --atmos-elevated-hover: rgba(255, 255, 255, 0.10);
+
+  /* === FOCUS STATES === */
+  --atmos-focus-ring: rgba(0, 113, 227, 0.12);
+
+  /* === SHADOWS === */
+  --atmos-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --atmos-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04);
+  --atmos-shadow-lg: 0 24px 70px rgba(15, 16, 18, 0.18);
+
+  /* === EASING === */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 
@@ -116,8 +150,49 @@
 }
 
 .dark {
-  --atmos-green: #30d158;
+  /* === CORE COLORS (Apple Dark Mode System) === */
+  --atmos-ink: #ffffff;
+  --atmos-page: #000000;
+  --atmos-canvas: #1c1c1e;
+  --atmos-surface: #2c2c2e;
+  --atmos-secondary: rgba(235, 235, 245, 0.6);
+  --atmos-muted: rgba(235, 235, 245, 0.3);
+  --atmos-quaternary: rgba(235, 235, 245, 0.18);
+  --atmos-border: #38383a;
+  --atmos-border-subtle: rgba(84, 84, 88, 0.6);
+  --atmos-ink-ghost: rgba(255, 255, 255, 0.2);
 
+  /* === SEMANTIC ACCENTS (Apple HIG - brighter for dark mode vibrancy) === */
+  --atmos-red: #ff4245;
+  --atmos-orange: #ff9230;
+  --atmos-yellow: #ffd600;
+  --atmos-green: #30d158;
+  --atmos-blue: #0091ff;
+  --atmos-blue-hover: #40a9ff;
+
+  /* === FILLS === */
+  --atmos-fill: rgba(120, 120, 128, 0.36);
+  --atmos-fill-secondary: rgba(120, 120, 128, 0.32);
+  --atmos-fill-tertiary: rgba(118, 118, 128, 0.24);
+
+  /* === ELEVATED SECTIONS (subtle elevation in dark mode) === */
+  --atmos-elevated-bg: #1c1c1e;
+  --atmos-elevated-fg: #ffffff;
+  --atmos-elevated-muted: rgba(235, 235, 245, 0.6);
+  --atmos-elevated-secondary: rgba(235, 235, 245, 0.4);
+  --atmos-elevated-tertiary: rgba(235, 235, 245, 0.3);
+  --atmos-elevated-border: rgba(255, 255, 255, 0.15);
+  --atmos-elevated-hover: rgba(255, 255, 255, 0.08);
+
+  /* === FOCUS STATES === */
+  --atmos-focus-ring: rgba(10, 132, 255, 0.2);
+
+  /* === SHADOWS === */
+  --atmos-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --atmos-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.15);
+  --atmos-shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.5);
+
+  /* === SHADCN (existing OKLch values) === */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

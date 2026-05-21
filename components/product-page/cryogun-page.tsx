@@ -40,7 +40,7 @@ const sciencePoints = [
 export default function CryogunPageContent() {
   return (
     <LazyMotionProvider>
-      <main className="bg-white text-[var(--atmos-ink)]">
+      <main className="bg-[var(--atmos-surface)] text-[var(--atmos-ink)]">
         <Hero />
         <StatementSection />
         <HowItWorksSection />
@@ -60,7 +60,7 @@ export default function CryogunPageContent() {
 
 function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-[var(--atmos-light-gray)] px-6 py-24 sm:px-8 lg:px-12">
+    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-[var(--atmos-page)] px-6 py-24 sm:px-8 lg:px-12">
       <div className="relative z-10 mx-auto grid w-full max-w-[1180px] grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,720px)_minmax(280px,360px)] lg:gap-8 xl:gap-10">
         <div className="max-w-[720px]">
           <p className="text-md font-medium text-[var(--atmos-muted)]">
@@ -78,7 +78,7 @@ function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
             <Link
               href="/book-demo"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-ink)] px-7 text-[0.95rem] font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-ink)] px-7 text-[0.95rem] font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2"
             >
               Book a demo
             </Link>
@@ -109,7 +109,7 @@ function Hero() {
 
 function StatementSection() {
   return (
-    <section className="bg-[var(--atmos-light-gray)] px-4 py-5 sm:px-6 sm:py-6 md:px-8 lg:py-7">
+    <section className="bg-[var(--atmos-page)] px-4 py-5 sm:px-6 sm:py-6 md:px-8 lg:py-7">
       <div className="mx-auto max-w-[1360px]">
         <div className="flex items-center gap-2">
           <FlaskConical className="size-4 text-[var(--atmos-ink)]" strokeWidth={1.8} />
@@ -252,7 +252,7 @@ function HowItWorksSection() {
                 ease: EASE_OUT,
               }}
             >
-              <div className="flex size-12 items-center justify-center rounded-xl bg-[var(--atmos-light-gray)] text-[var(--atmos-blue)]">
+              <div className="flex size-12 items-center justify-center rounded-xl bg-[var(--atmos-fill)] text-[var(--atmos-blue)]">
                 <step.icon className="size-6" strokeWidth={1.5} />
               </div>
               <h3 className="mt-5 text-lg font-medium text-[var(--atmos-ink)] sm:text-xl">
@@ -445,7 +445,7 @@ function TestimonialsSection() {
                       src={testimonial.avatar}
                       alt={testimonial.name}
                     />
-                    <AvatarFallback className="bg-[var(--atmos-light-gray)] text-sm text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                    <AvatarFallback className="bg-[var(--atmos-fill)] text-sm text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
@@ -558,7 +558,7 @@ function UseCasesSection() {
                 ease: EASE_OUT,
               }}
             >
-              <div className="relative aspect-[4/5] overflow-hidden bg-[var(--atmos-light-gray)]">
+              <div className="relative aspect-[4/5] overflow-hidden bg-[var(--atmos-fill)]">
                 <Image
                   src={useCase.image}
                   alt={useCase.title}
@@ -662,12 +662,12 @@ function TrustSection() {
     <section
       ref={sectionRef}
       id="trust"
-      className="w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
+      className="w-full bg-[var(--atmos-elevated-bg)] px-6 py-20 text-[var(--atmos-elevated-fg)] sm:px-8 sm:py-24 md:py-32"
     >
       <div className="mx-auto max-w-[1180px]">
         <div className="max-w-3xl">
           <m.p
-            className="text-sm font-medium uppercase tracking-[0.16em] text-white/50"
+            className="text-sm font-medium uppercase tracking-[0.16em] text-[var(--atmos-elevated-secondary)]"
             {...animateProps(0)}
           >
             Your Investment Protected
@@ -1144,7 +1144,7 @@ function FinalCTASection() {
     <section
       ref={sectionRef}
       id="cta"
-      className="w-full bg-[#0f1012] px-6 py-20 text-white sm:px-8 sm:py-24 md:py-32"
+      className="w-full bg-[var(--atmos-elevated-bg)] px-6 py-20 text-[var(--atmos-elevated-fg)] sm:px-8 sm:py-24 md:py-32"
     >
       <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
         <m.h2
@@ -1164,7 +1164,7 @@ function FinalCTASection() {
           See if CryoGun fits your setting.
         </m.h2>
         <m.p
-          className="mt-4 max-w-2xl text-base leading-7 text-white/68 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
+          className="mt-4 max-w-2xl text-base leading-7 text-[var(--atmos-elevated-muted)] sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
           initial={
             shouldReduceMotion
               ? false
@@ -1197,13 +1197,13 @@ function FinalCTASection() {
         >
           <Link
             href="/book-demo"
-            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-7 text-center text-[0.95rem] font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-7 text-center text-[0.95rem] font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97]"
           >
             Book a Demo
           </Link>
           <a
             href="#specs"
-            className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-white/20 px-7 text-center text-[0.95rem] font-medium text-white transition-[background-color,border-color,transform] duration-200 hover:border-white/40 hover:bg-white/5 active:scale-[0.97]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[var(--atmos-elevated-border)] px-7 text-center text-[0.95rem] font-medium text-[var(--atmos-elevated-fg)] transition-[background-color,border-color,transform] duration-200 hover:border-[var(--atmos-elevated-secondary)] hover:bg-[var(--atmos-elevated-hover)] active:scale-[0.97]"
           >
             View Full Specs
           </a>

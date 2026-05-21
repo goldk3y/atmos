@@ -182,7 +182,7 @@ export default function VideoSwipeSection() {
                 <SwiperSlide key={video.title}>
                   <button
                     type="button"
-                    className="group relative block h-full w-full overflow-hidden rounded-2xl bg-[var(--atmos-light-gray)] text-left shadow-[0_24px_70px_rgba(15,16,18,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]"
+                    className="group relative block h-full w-full overflow-hidden rounded-2xl bg-[var(--atmos-fill)] text-left shadow-[0_24px_70px_rgba(15,16,18,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--atmos-page)]"
                     onClick={() => setActiveVideo(video)}
                     aria-label={`Play ${video.title}`}
                   >
@@ -215,7 +215,7 @@ export default function VideoSwipeSection() {
             <button
               type="button"
               onClick={() => swiperRef.current?.slidePrev()}
-              className="video-swipe-prev absolute left-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:left-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
+              className="video-swipe-prev absolute left-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] dark:shadow-none backdrop-blur-md transition-colors hover:bg-[var(--atmos-surface)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:left-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
               aria-label="Previous video"
             >
               <ChevronLeftIcon className="size-5" strokeWidth={1.8} />
@@ -224,7 +224,7 @@ export default function VideoSwipeSection() {
             <button
               type="button"
               onClick={() => swiperRef.current?.slideNext()}
-              className="video-swipe-next absolute right-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-white/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:right-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
+              className="video-swipe-next absolute right-[calc(50%-3rem)] top-full z-30 mt-3 flex size-11 items-center justify-center rounded-full border border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 text-[var(--atmos-ink)] shadow-[0_12px_32px_rgba(15,16,18,0.12)] dark:shadow-none backdrop-blur-md transition-colors hover:bg-[var(--atmos-surface)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] sm:right-0 sm:top-1/2 sm:mt-0 sm:size-12 sm:-translate-y-1/2"
               aria-label="Next video"
             >
               <ChevronRightIcon className="size-5" strokeWidth={1.8} />

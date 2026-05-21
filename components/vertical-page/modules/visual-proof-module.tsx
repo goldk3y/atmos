@@ -62,7 +62,7 @@ export default function VisualProofModule({
             transition={{ duration: 0.65, ease: EASE_OUT }}
           >
             {/* Placeholder for short video loop */}
-            <div className="flex aspect-video flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[var(--atmos-border)] bg-[var(--atmos-light-gray)]">
+            <div className="flex aspect-video flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[var(--atmos-border)] bg-[var(--atmos-fill)]">
               <Video className="size-12 text-[var(--atmos-muted)]" />
               <p className="mt-4 text-sm font-medium text-[var(--atmos-muted)]">
                 Short video loop (3 to 5 seconds)

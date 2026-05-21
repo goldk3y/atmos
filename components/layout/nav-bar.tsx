@@ -11,6 +11,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 import { MainNavigation } from "./main-navigation";
+import { MobileNav } from "./mobile-nav";
 
 export default function NavBar({
   alwaysVisible = false,
@@ -65,7 +66,7 @@ export default function NavBar({
   return (
     <LazyMotionProvider>
       <m.header
-        className="pointer-events-none fixed left-0 right-0 top-2 z-40 flex justify-center px-4"
+        className="pointer-events-none fixed left-0 right-0 top-2 z-40 flex items-center justify-center gap-3 px-4"
         initial={false}
         animate={{
           opacity: effectiveIsVisible ? 1 : 0,
@@ -78,7 +79,7 @@ export default function NavBar({
         }
         aria-hidden={!effectiveIsVisible}
       >
-        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full border-[0.5px] border-gray-200 bg-white/80 px-3 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] backdrop-blur-sm">
+        <div className="pointer-events-auto mx-auto flex h-12 w-full max-w-[900px] items-center justify-between rounded-full border-[0.5px] border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 px-3 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] dark:shadow-none dark:ring-1 dark:ring-[var(--atmos-border-subtle)] backdrop-blur-sm">
           <Link
             href="/"
             className="group rounded-full pl-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)]"
@@ -88,7 +89,7 @@ export default function NavBar({
               alt="Atmos"
               width={100}
               height={32}
-              className="h-5 w-auto transition-all duration-200 group-hover:[filter:brightness(0)_saturate(100%)_invert(35%)_sepia(100%)_saturate(1000%)_hue-rotate(190deg)_brightness(90%)_contrast(90%)]"
+              className="h-5 w-auto transition-all duration-200 dark:invert group-hover:[filter:brightness(0)_saturate(100%)_invert(35%)_sepia(100%)_saturate(1000%)_hue-rotate(190deg)_brightness(90%)_contrast(90%)]"
             />
           </Link>
 
@@ -98,11 +99,12 @@ export default function NavBar({
 
           <Link
             href={ctaHref}
-            className="rounded-full bg-[var(--atmos-ink)] px-4 py-2 text-xs font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="rounded-full bg-[var(--atmos-ink)] px-4 py-2 text-xs font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--atmos-canvas)]"
           >
             Book a Demo
           </Link>
         </div>
+        <MobileNav />
       </m.header>
     </LazyMotionProvider>
   );

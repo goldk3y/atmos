@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { m } from "motion/react";
+import { ChevronDown } from "lucide-react";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
 
 type FormData = {
@@ -97,9 +98,9 @@ export function ContactClient() {
                     {isSubmitted ? (
                       <div className="overflow-hidden rounded-[1rem] border border-[var(--atmos-border)] bg-[var(--atmos-canvas)] p-6 sm:p-8">
                         <div className="flex flex-col items-center py-8 text-center">
-                          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--atmos-green)]/10">
                             <svg
-                              className="h-8 w-8 text-green-600"
+                              className="h-8 w-8 text-[var(--atmos-green)]"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -155,11 +156,11 @@ export function ContactClient() {
                                 type="text"
                                 value={formData.firstName}
                                 onChange={(e) => updateField("firstName", e.target.value)}
-                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                                 placeholder="First"
                               />
                               {errors.firstName && (
-                                <p className="mt-1.5 text-sm text-red-600">{errors.firstName}</p>
+                                <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.firstName}</p>
                               )}
                             </div>
 
@@ -175,11 +176,11 @@ export function ContactClient() {
                                 type="text"
                                 value={formData.lastName}
                                 onChange={(e) => updateField("lastName", e.target.value)}
-                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                                 placeholder="Last"
                               />
                               {errors.lastName && (
-                                <p className="mt-1.5 text-sm text-red-600">{errors.lastName}</p>
+                                <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.lastName}</p>
                               )}
                             </div>
                           </div>
@@ -196,11 +197,11 @@ export function ContactClient() {
                               type="email"
                               value={formData.email}
                               onChange={(e) => updateField("email", e.target.value)}
-                              className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                              className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                               placeholder="you@company.com"
                             />
                             {errors.email && (
-                              <p className="mt-1.5 text-sm text-red-600">{errors.email}</p>
+                              <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.email}</p>
                             )}
                           </div>
 
@@ -220,7 +221,7 @@ export function ContactClient() {
                                 type="tel"
                                 value={formData.phone}
                                 onChange={(e) => updateField("phone", e.target.value)}
-                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                                 placeholder="+1 (555) 000-0000"
                               />
                             </div>
@@ -240,7 +241,7 @@ export function ContactClient() {
                                 type="text"
                                 value={formData.company}
                                 onChange={(e) => updateField("company", e.target.value)}
-                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-white px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                                className="mt-1.5 h-11 w-full rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                                 placeholder="Your organization"
                               />
                             </div>
@@ -253,27 +254,24 @@ export function ContactClient() {
                             >
                               Subject
                             </label>
-                            <select
-                              id="subject"
-                              value={formData.subject}
-                              onChange={(e) => updateField("subject", e.target.value)}
-                              className="mt-1.5 h-11 w-full appearance-none rounded-lg border border-[var(--atmos-border)] bg-white px-4 pr-10 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
-                              style={{
-                                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
-                                backgroundPosition: "right 0.75rem center",
-                                backgroundRepeat: "no-repeat",
-                                backgroundSize: "1.25rem",
-                              }}
-                            >
-                              <option value="">Select a subject</option>
-                              {subjectOptions.map((option) => (
-                                <option key={option} value={option}>
-                                  {option}
-                                </option>
-                              ))}
-                            </select>
+                            <div className="relative mt-1.5">
+                              <select
+                                id="subject"
+                                value={formData.subject}
+                                onChange={(e) => updateField("subject", e.target.value)}
+                                className="h-11 w-full appearance-none rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 pr-10 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
+                              >
+                                <option value="">Select a subject</option>
+                                {subjectOptions.map((option) => (
+                                  <option key={option} value={option}>
+                                    {option}
+                                  </option>
+                                ))}
+                              </select>
+                              <ChevronDown className="pointer-events-none absolute right-3 top-1/2 size-5 -translate-y-1/2 text-[var(--atmos-muted)]" />
+                            </div>
                             {errors.subject && (
-                              <p className="mt-1.5 text-sm text-red-600">{errors.subject}</p>
+                              <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.subject}</p>
                             )}
                           </div>
 
@@ -290,10 +288,10 @@ export function ContactClient() {
                               onChange={(e) => updateField("message", e.target.value)}
                               placeholder="How can we help you?"
                               rows={5}
-                              className="mt-1.5 w-full resize-none rounded-lg border border-[var(--atmos-border)] bg-white px-4 py-3 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_rgba(0,113,227,0.1)]"
+                              className="mt-1.5 w-full resize-none rounded-lg border border-[var(--atmos-border)] bg-[var(--atmos-surface)] px-4 py-3 text-sm text-[var(--atmos-ink)] outline-none transition-[border-color,box-shadow] placeholder:text-[var(--atmos-muted)] focus:border-[var(--atmos-blue)] focus:shadow-[0_0_0_3px_var(--atmos-focus-ring)]"
                             />
                             {errors.message && (
-                              <p className="mt-1.5 text-sm text-red-600">{errors.message}</p>
+                              <p className="mt-1.5 text-sm text-[var(--atmos-red)]">{errors.message}</p>
                             )}
                           </div>
                         </div>
@@ -301,7 +299,7 @@ export function ContactClient() {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="mt-8 w-full rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+                          className="mt-8 w-full rounded-full bg-[var(--atmos-ink)] px-6 py-3 text-sm font-medium text-[var(--atmos-page)] transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
                         >
                           {isSubmitting ? "Sending..." : "Send Message"}
                         </button>

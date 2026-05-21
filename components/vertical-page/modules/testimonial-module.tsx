@@ -65,7 +65,7 @@ export default function TestimonialModule({
                 {testimonial.avatar && (
                   <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                 )}
-                <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                <AvatarFallback className="bg-[var(--atmos-fill)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                   {initials}
                 </AvatarFallback>
               </Avatar>

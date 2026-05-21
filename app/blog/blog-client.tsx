@@ -175,8 +175,8 @@ export function BlogClient() {
                   className={cn(
                     "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
                     activeCategory === category.id
-                      ? "bg-[var(--atmos-ink)] text-white"
-                      : "bg-[var(--atmos-page)] text-[var(--atmos-secondary)] ring-1 ring-[var(--atmos-border)] hover:bg-[var(--atmos-border)] hover:text-[var(--atmos-ink)]",
+                      ? "bg-[var(--atmos-ink)] text-[var(--atmos-page)]"
+                      : "bg-[var(--atmos-surface)] text-[var(--atmos-secondary)] ring-1 ring-[var(--atmos-border)] hover:bg-[var(--atmos-border)] hover:text-[var(--atmos-ink)]",
                   )}
                 >
                   {category.label}
@@ -257,14 +257,14 @@ function BlogPostCard({
       }
       className={cn(
         "group relative flex transform-gpu flex-col overflow-hidden rounded-[1.25rem]",
-        "bg-[var(--atmos-page)] ring-1 ring-[var(--atmos-border)]",
-        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[#cfcfd5]",
+        "bg-[var(--atmos-surface)] ring-1 ring-[var(--atmos-border)]",
+        "transition-[transform,box-shadow,ring-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-1 hover:ring-[var(--atmos-secondary)]",
         "md:flex-row",
       )}
     >
       {/* Image */}
       <div className="relative h-56 shrink-0 p-2 md:h-auto md:w-[400px] lg:w-[480px]">
-        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[1rem] bg-[var(--atmos-light-gray)]">
+        <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[1rem] bg-[var(--atmos-fill)]">
           {post.image ? (
             <Image
               src={post.image}

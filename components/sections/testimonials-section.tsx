@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       <section
         ref={sectionRef}
         id="testimonials"
-        className="w-full bg-[var(--atmos-page)] px-6 pb-20 pt-4 sm:px-8 sm:pb-24 sm:pt-16 md:pb-32 md:pt-20"
+        className="w-full bg-[var(--atmos-canvas)] px-6 pb-20 pt-4 sm:px-8 sm:pb-24 sm:pt-16 md:pb-32 md:pt-20"
       >
         <div className="mx-auto max-w-[1180px]">
           <div className="mb-8 max-w-2xl sm:mb-10">
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
               {...animateProps(0.1)}
               className="sm:col-span-2 lg:row-span-2"
             >
-              <Card className="grid h-full grid-rows-[auto_1fr] gap-8 border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none sm:p-6">
+              <Card className="grid h-full grid-rows-[auto_1fr] gap-8 border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none sm:p-6">
                 <CardHeader>
                   <div className="h-6 w-fit font-semibold text-[var(--atmos-ink)]">
                     Performance Physical Therapy
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&crop=face"
                           alt="Dr. Sarah Mitchell"
                         />
-                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-fill)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           SM
                         </AvatarFallback>
                       </Avatar>
@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
             </m.div>
 
             <m.div {...animateProps(0.17)} className="md:col-span-2">
-              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none md:col-span-2">
+              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none md:col-span-2">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                     <p className="text-lg font-medium leading-7 text-[var(--atmos-ink)] sm:text-xl sm:leading-normal">
@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face"
                           alt="James Chen"
                         />
-                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-fill)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           JC
                         </AvatarFallback>
                       </Avatar>
@@ -136,7 +136,7 @@ export default function TestimonialsSection() {
             </m.div>
 
             <m.div {...animateProps(0.24)}>
-              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none h-full">
+              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none h-full">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                     <p className="leading-7 text-[var(--atmos-ink)]">
@@ -152,7 +152,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face"
                           alt="Maria Rodriguez"
                         />
-                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-fill)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           MR
                         </AvatarFallback>
                       </Avatar>
@@ -172,7 +172,7 @@ export default function TestimonialsSection() {
             </m.div>
 
             <m.div {...animateProps(0.31)}>
-              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-canvas)] shadow-none h-full">
+              <Card className="border-[var(--atmos-border)] bg-[var(--atmos-surface)] shadow-none h-full">
                 <CardContent className="h-full pt-6">
                   <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                     <p className="leading-7 text-[var(--atmos-ink)]">
@@ -188,7 +188,7 @@ export default function TestimonialsSection() {
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
                           alt="David Park"
                         />
-                        <AvatarFallback className="bg-[var(--atmos-light-gray)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
+                        <AvatarFallback className="bg-[var(--atmos-fill)] text-[var(--atmos-ink)] ring-1 ring-[var(--atmos-border)]">
                           DP
                         </AvatarFallback>
                       </Avatar>

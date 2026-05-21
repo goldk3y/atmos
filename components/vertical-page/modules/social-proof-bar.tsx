@@ -65,7 +65,7 @@ export default function SocialProofBar({ socialProof }: SocialProofBarProps) {
                     src={logo.src}
                     alt={logo.alt}
                     fill
-                    className="object-contain"
+                    className="object-contain dark:invert"
                   />
                 </div>
               ))}

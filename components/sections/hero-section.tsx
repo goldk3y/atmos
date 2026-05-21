@@ -2,6 +2,7 @@
 
 import { ArrowDown, Play } from "lucide-react";
 import { m } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 import { VideoPlayerModal } from "@/components/media/video-player";
 import { LazyMotionProvider } from "@/components/ui/lazy-motion";
@@ -21,16 +22,30 @@ export default function HeroSection() {
 
   return (
     <LazyMotionProvider>
-      <div className="bg-white p-2">
+      <div className="bg-[var(--atmos-canvas)] p-2">
         <m.section
-          className="relative min-h-[calc(100dvh-1rem)] w-full overflow-hidden rounded-[1rem] bg-[length:auto_150%] bg-[position:center_0%] sm:bg-cover sm:bg-center"
-          style={{
-            backgroundImage: 'url("/ecmadao-T8gG3G-fWE0-unsplash.jpg")',
-          }}
+          className="relative min-h-[calc(100dvh-1rem)] w-full overflow-hidden rounded-[1rem]"
           initial={{ transform: "scale(1.1)" }}
           animate={{ transform: "scale(1)" }}
           transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
         >
+          {/* CSS-based theme switching prevents FOUC - both images render, CSS controls visibility */}
+          <Image
+            src="/hero-image-light.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[center_0%] sm:object-center block dark:hidden"
+            sizes="100vw"
+          />
+          <Image
+            src="/hero-image-dark.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[center_0%] sm:object-center hidden dark:block"
+            sizes="100vw"
+          />
           <div className="relative z-30 flex h-full items-start p-5 pt-10 sm:p-8 sm:pt-14 lg:p-12 lg:pt-24">
             <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-8">
               <div className="flex flex-col gap-5 sm:gap-6">
@@ -47,7 +62,7 @@ export default function HeroSection() {
                   Atmos Performance
                 </m.p>
                 <m.h1
-                  className="text-4xl font-medium leading-[1.02] text-white sm:text-4xl sm:leading-[1.05] lg:text-5xl"
+                  className="text-3xl font-medium leading-[1.02] text-white sm:text-4xl sm:leading-[1.05] lg:text-5xl"
                   initial={{ opacity: 0, transform: "translateY(12px)" }}
                   animate={{ opacity: 1, transform: "translateY(0px)" }}
                   transition={{
@@ -123,7 +138,7 @@ export default function HeroSection() {
             type="button"
             aria-label="Scroll to next section"
             onClick={scrollToNextSection}
-            className="absolute bottom-4 left-1/2 z-30 flex size-12 -translate-x-1/2 items-center justify-center rounded-full border border-white/40 bg-white/70 text-black backdrop-blur-md transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20 sm:size-14"
+            className="absolute bottom-4 left-1/2 z-30 flex size-12 -translate-x-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20 sm:size-14"
             initial={{
               opacity: 0,
               transform: "translateX(-50%) translateY(10px)",

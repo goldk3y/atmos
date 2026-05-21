@@ -37,7 +37,7 @@ export default function BeliefStatementSection({
         <div className="relative mx-auto max-w-4xl">
           <ScrollRevealParagraphs
             paragraphs={BELIEF_PARAGRAPHS}
-            className="text-balance text-center text-xl font-medium leading-[1.65] text-[var(--atmos-ink)] sm:text-xl sm:leading-[1.7] lg:text-2xl"
+            className="text-balance text-center text-2xl font-medium leading-[1.65] text-[var(--atmos-ink)] sm:text-2xl sm:leading-[1.7] lg:text-3xl"
           />
         </div>
       </section>
@@ -109,7 +109,7 @@ function ScrollRevealParagraphs({
 function RevealWord({ word, index, isInView }: RevealWordProps) {
   return (
     <span className="relative mr-[0.28em] inline-block">
-      <span className="text-[color:rgba(15,16,18,0.2)]">{word}</span>
+      <span className="text-[var(--atmos-ink-ghost)]">{word}</span>
 
       <m.span
         className="absolute inset-0 text-[var(--atmos-ink)]"

@@ -54,7 +54,7 @@ export function TrainingClient() {
               >
                 <button
                   type="button"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-8 py-3 text-base font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[#0064c8] active:scale-[0.97]"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--atmos-blue)] px-8 py-3 text-base font-medium text-white transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-[var(--atmos-blue-hover)] active:scale-[0.97]"
                 >
                   Sign In
                 </button>
@@ -62,7 +62,7 @@ export function TrainingClient() {
                   Not a member?{" "}
                   <a
                     href="/book-demo"
-                    className="text-[var(--atmos-blue)] underline underline-offset-2 transition-colors hover:text-[#0064c8]"
+                    className="text-[var(--atmos-blue)] underline underline-offset-2 transition-colors hover:text-[var(--atmos-blue-hover)]"
                   >
                     Get started today
                   </a>
