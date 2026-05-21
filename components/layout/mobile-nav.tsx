@@ -62,7 +62,7 @@ export function MobileNav() {
             className="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full border-[0.5px] border-[var(--atmos-border)] bg-[var(--atmos-canvas)]/80 text-[var(--atmos-ink)] shadow-[0_1px_2px_rgba(0,0,0,0.01),0_2px_4px_rgba(0,0,0,0.01),0_4px_8px_rgba(0,0,0,0.01),0_8px_16px_rgba(0,0,0,0.01),0_16px_32px_rgba(0,0,0,0.01)] backdrop-blur-sm transition-all duration-200 hover:bg-[var(--atmos-canvas)] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--atmos-blue)] dark:shadow-none dark:ring-1 dark:ring-[var(--atmos-border-subtle)]"
             aria-label="Open navigation menu"
           >
-            <Menu className="size-5" />
+            <Menu className="size-[1.125rem]" />
           </button>
         </SheetTrigger>
       <SheetContent
